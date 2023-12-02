@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.ae111aee.css",
-    "main.js": "/static/js/main.ccbb7e52.js",
-    "index.html": "/index.html",
-    "main.ccbb7e52.js.map": "/static/js/main.ccbb7e52.js.map"
+    "main.css": "/catnadian-party/static/css/main.ae111aee.css",
+    "main.js": "/catnadian-party/static/js/main.2a6d3412.js",
+    "index.html": "/catnadian-party/index.html",
+    "main.2a6d3412.js.map": "/catnadian-party/static/js/main.2a6d3412.js.map"
   },
   "entrypoints": [
     "static/css/main.ae111aee.css",
-    "static/js/main.ccbb7e52.js"
+    "static/js/main.2a6d3412.js"
   ]
 }
