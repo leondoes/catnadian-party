@@ -9,7 +9,7 @@ document.title = "Catnadian Party of Canada";
 window.__leonVersion = package_json.version;
 
 const App = () => (
-  <div>Hello, World!</div>
+  <div>Hello, World!.....</div>
 );
 
 export default App;
