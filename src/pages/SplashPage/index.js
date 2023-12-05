@@ -1,11 +1,12 @@
 import React from "react";
 import img from "../../assets/cp_splash.png";
+import { SplashPicture } from "./styled";
 
 const SplashPage = () => {
   return (
-    <div>
+    <SplashPicture>
       <img src={img} alt="Splash" />
-    </div>
+    </SplashPicture>
   );
 };
 
