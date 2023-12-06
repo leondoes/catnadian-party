@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../../assets/cp_splash.png";
+import img from "../../assets/logo.svg";
 import { SplashPicture } from "./styled";
 
 const SplashPage = () => {

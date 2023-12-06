@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
-export const SplashPicture = styled.img `
-
+export const SplashPicture = styled.div `
+width: 100%;
+height: 100%;
 `;
