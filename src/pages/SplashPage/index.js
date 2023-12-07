@@ -1,12 +1,14 @@
 import React from "react";
-import img from "../../assets/logo.svg";
-import { SplashPicture } from "./styled";
+import img from "../../assets/logo.png";
+import { SplashPicture, PageContainer } from "./styled";
 
 const SplashPage = () => {
   return (
+    <PageContainer>
     <SplashPicture>
       <img src={img} alt="Splash" />
     </SplashPicture>
+    </PageContainer>
   );
 };
 
