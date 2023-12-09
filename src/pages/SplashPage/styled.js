@@ -19,7 +19,7 @@ export const PageContainer = styled.div`
 
 export const ButtonContainer = styled.div`
   display: flex;
-  justify-content: center; // Centers buttons horizontally
+  justify-content: space-evenly; // Centers buttons horizontally
   align-items: center; // Centers buttons vertically
   position: relative; // Position relative to allow absolute positioning inside
   height: 50px; // Set a fixed height for your container
@@ -27,17 +27,18 @@ export const ButtonContainer = styled.div`
 `;
 
 export const EnterButton = styled.button`
-  font-family: 'Radio Canada', sans-serif;
+  font-family: 'Kalnia', sans-serif;
+  font-weight: 400;
   font-size: 4rem;
   color: #d35400;
   background-color: transparent;
   border: 0px solid #d35400;
   border-radius: 5px;
-  padding: 10px 20px;
   margin: 0; // Start with no margin
   cursor: pointer;
   transition: color 0.3s ease, transform 0.3s ease;
-  width: 150px; // Set a fixed width for both buttons
+  width: 200px; // Set a fixed width for both buttons
+  text-shadow: 1px 1px 2px grey;
 
   &:hover {
     color: #ffffff;
@@ -47,10 +48,20 @@ export const EnterButton = styled.button`
 `;
 
 // Apply a manual offset if needed using margin
-export const EnterButtonLeft = styled(EnterButton)`
-  margin-right: 10px; // Adjust as necessary
+export const EnglishButton = styled(EnterButton)`
 `;
 
-export const EnterButtonRight = styled(EnterButton)`
-  margin-left: 10px; // Adjust as necessary
+export const FrenchButton = styled(EnterButton)`
+  width: 250px;
+`;
+
+export const Title = styled.div`
+  font-family: 'Kalnia', sans-serif; /* Example font */
+  font-variant: small-caps;
+  font-weight: 700;
+  font-size: 4rem; /* Example size */
+  color: #d35400; /* Example color */
+  text-align: center;
+  margin: 20px 0;
+  text-shadow: 1px 1px 2px grey;
 `;

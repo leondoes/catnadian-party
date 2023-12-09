@@ -1,20 +1,28 @@
 import React from "react";
 import img from "../../assets/logo.png";
-import { SplashPicture, PageContainer, EnterButtonLeft,EnterButtonRight, ButtonContainer } from "./styled";
-
+import {
+  SplashPicture,
+  PageContainer,
+  EnglishButton,
+  FrenchButton,
+  ButtonContainer,
+  Title,
+} from "./styled";
 
 const SplashPage = () => {
   return (
     <PageContainer>
+      <Title>The Catnadian Party of Canada</Title>
       <SplashPicture>
         <img src={img} alt="Splash" />
       </SplashPicture>
       <ButtonContainer>
-        <EnterButtonLeft>Enter</EnterButtonLeft>
-        <EnterButtonRight>Entrer</EnterButtonRight>
+        <EnglishButton>Enter</EnglishButton>
+        <FrenchButton>Entrer</FrenchButton>
       </ButtonContainer>
     </PageContainer>
   );
 };
 
 export default SplashPage;
+
