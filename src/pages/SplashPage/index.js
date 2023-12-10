@@ -9,18 +9,20 @@ import {
   Title,
 } from "./styled";
 
-const SplashPage = () => {
+const SplashPage = ({ onEnter, entered }) => {
   return (
+    <div className={`SplashPage ${entered ? 'hide' : ''}`}>
     <PageContainer>
       <Title>The Catnadian Party of Canada</Title>
       <SplashPicture>
         <img src={img} alt="Splash" />
       </SplashPicture>
       <ButtonContainer>
-        <EnglishButton>Enter</EnglishButton>
-        <FrenchButton>Entrer</FrenchButton>
+        <EnglishButton onClick={onEnter}>Enter</EnglishButton>
+        <FrenchButton onClick={onEnter}>Entrer</FrenchButton>
       </ButtonContainer>
     </PageContainer>
+    </div>
   );
 };
 

@@ -5,3 +5,20 @@ About the Party Component: Brief introduction to the cat political party.
 News Feed Component: Displaying the latest "political updates" from the party.
 Footer Component: With contact information and social media links.
 */
+
+import React from "react";
+
+import {
+} from "./styled";
+
+const HomePage = () => {
+
+  return (
+    <>
+    <div>Hello</div>
+    </>
+  );
+};
+
+export default HomePage;
+

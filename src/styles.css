@@ -1,1 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@100;200;300;400;500;600;700&display=swap');
+
+.App {
+    position: relative;
+    overflow: hidden; /* This will hide the NavBar initially if it's within the flow of the document */
+  }
+  
+  .SplashPage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transition: transform 0.8s ease-in-out;
+    z-index: 10; /* Ensure splash is above other content for the animation */
+  }
+  
+  .SplashPage.hide {
+    transform: translateY(-100%); /* Slide up and out of view */
+  }
+  
+  .mainContent {
+    position: relative; /* Position relative to the main .App container */
+    transition: transform 0.5s ease-in-out;
+    transform: translateY(100vh); /* Initially off-screen */
+    z-index: 5; /* Below the splash screen */
+  }
+  
+  .mainContent.show {
+    transform: translateY(0); /* Slide into view */
+  }
+
+  .NavBar {
+    position: fixed;
+    top: -100%; /* Hide above the viewport */
+    left: 0;
+    width: 100%;
+    transition: top 0.9s ease-in-out; /* Animate the `top` property */
+    z-index: 20; /* Make sure it's above other content */
+  }
+  
+  /* When the 'show' class is added, the NavBar slides down into view */
+  .NavBar.show {
+    top: 0; /* Slide down to the default position */
+  }
