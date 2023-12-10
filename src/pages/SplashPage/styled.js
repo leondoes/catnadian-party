@@ -15,6 +15,12 @@ export const PageContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: transform 0.5s ease; // Smooth transition for sliding up
+  transform: translateY(0); // Start at current position
+
+  &.hidden {
+    transform: translateY(-100vh); // Slide up out of view
+  }
 `;
 
 export const ButtonContainer = styled.div`
