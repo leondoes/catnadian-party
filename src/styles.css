@@ -36,7 +36,7 @@
     left: 0;
     width: 100%;
     transition: top 0.9s ease-in-out; /* Animate the `top` property */
-    z-index: 20; /* Make sure it's above other content */
+    z-index: 0; /* Make sure it's above other content */
   }
   
   /* When the 'show' class is added, the NavBar slides down into view */

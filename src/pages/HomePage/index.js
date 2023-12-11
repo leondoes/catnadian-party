@@ -8,17 +8,18 @@ Footer Component: With contact information and social media links.
 
 import React from "react";
 
-import {
-} from "./styled";
+import PageLayout from "../../layout/PageLayout";
+
+import {} from "./styled";
 
 const HomePage = () => {
-
   return (
-    <>
-    <div>Hello</div>
-    </>
+    <PageLayout>
+      <div>Hello</div>
+      <div>Hello</div>
+      <div>Hello</div>
+    </PageLayout>
   );
 };
 
 export default HomePage;
-
