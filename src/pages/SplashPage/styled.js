@@ -10,7 +10,6 @@ export const SplashPicture = styled.div`
 
 export const PageContainer = styled.div`
   background-color: #e2d8ce;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,44 +20,6 @@ export const PageContainer = styled.div`
   &.hidden {
     transform: translateY(-100vh); // Slide up out of view
   }
-`;
-
-export const ButtonContainer = styled.div`
-  display: flex;
-  justify-content: space-evenly; // Centers buttons horizontally
-  align-items: center; // Centers buttons vertically
-  position: relative; // Position relative to allow absolute positioning inside
-  height: 50px; // Set a fixed height for your container
-  width: 100%; // Full width to center properly
-`;
-
-export const EnterButton = styled.button`
-  font-family: 'Kalnia', sans-serif;
-  font-weight: 400;
-  font-size: 4rem;
-  color: #d35400;
-  background-color: transparent;
-  border: 0px solid #d35400;
-  border-radius: 5px;
-  margin: 0; // Start with no margin
-  cursor: pointer;
-  transition: color 0.3s ease, transform 0.3s ease;
-  width: 200px; // Set a fixed width for both buttons
-  text-shadow: 1px 1px 2px grey;
-
-  &:hover {
-    color: #ffffff;
-    background-color: #d35400;
-    transform: scale(1.05);
-  }
-`;
-
-// Apply a manual offset if needed using margin
-export const EnglishButton = styled(EnterButton)`
-`;
-
-export const FrenchButton = styled(EnterButton)`
-  width: 250px;
 `;
 
 export const Title = styled.div`

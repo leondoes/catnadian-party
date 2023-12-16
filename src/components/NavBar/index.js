@@ -1,9 +1,11 @@
 import React from 'react';
-import {Nav, StyledLink} from "../NavBar/styled";
+import {Nav, StyledLink, HomeLogo} from "../NavBar/styled";
+import logo from "../../assets/logo.png";
 
 const NavBar = () => {
     return (
       <Nav>
+        <StyledLink to ="/"><HomeLogo src={logo} alt="home"/></StyledLink>
         <StyledLink to="/candidates">Candidates</StyledLink>
         <StyledLink to="/contact">Contact</StyledLink>
         <StyledLink to="/events">Events</StyledLink>
