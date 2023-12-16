@@ -52,3 +52,8 @@ export const StyledLink = styled(NavLink)`
     color: #f0e68c;
   }
 `;
+
+export const HomeLogo = styled.img`
+width: 50px;
+height: 45x;
+`
