@@ -12,6 +12,12 @@ const CandidateList = () => {
 
   const candidates = [
     {
+      name: "Chairman Meow",
+      photo: "/assets/chairmanmeow.jpg",
+      province: "Canada",
+      bio: "Chairman Meow, Canada’s prime ministerial hopeful, is the visionary leader with a purr-pose. Promising universal catnip care and a national string toy program, he is the beacon of hope for a purrfect future for all of cat-kind.",
+    },
+    {
       name: "Whiskers",
       photo: "/assets/whiskers.jpg",
       province: "Alberta",
@@ -89,15 +95,9 @@ const CandidateList = () => {
       province: "Yukon",
       bio: "Felix from Yukon is breaking the ice with innovative policies like the four-day workweek for humans, ensuring more playtime for pets. As a gold panning champion, Felix is the purr-fect blend of wilderness wisdom and domestic charm.",
     },
-    {
-      name: "Chairman Meow",
-      photo: "/assets/chairmanmeow.jpg",
-      province: "Canada",
-      bio: "Chairman Meow, Canada’s prime ministerial hopeful, is the visionary leader with a purr-pose. Promising universal catnip care and a national string toy program, he is the beacon of hope for a purrfect future for all of cat-kind.",
-    },
   ];
 
-  const initialCandidate = selectedCandidate || candidates[candidates.length - 1];
+  const initialCandidate = selectedCandidate || candidates[0];
 
   return (
     <CandidatesContainer>
