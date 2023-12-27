@@ -3,7 +3,6 @@ Product Grid Component: Displaying party-themed merchandise like t-shirts, mugs,
 */
 
 import React from 'react';
-import './ProductGrid.css'; // Import your CSS
 
 const ProductGrid = ({ products }) => {
   return (
