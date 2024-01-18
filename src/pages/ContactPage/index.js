@@ -1,5 +1,12 @@
-/*
-Contact Form Component: For visitors to send messages or join the party mailing list.
-Map Component: Showing the party's "headquarters" with a humorous location.
-*/
+import React from 'react';
+import ContactForm from '../../components/ContactForm';
 
+const App = () => {
+    return (
+        <div>
+            <ContactForm />
+        </div>
+    );
+};
+
+export default App;
