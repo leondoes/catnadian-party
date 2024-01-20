@@ -1,18 +1,31 @@
 import React, { useState, useEffect } from 'react';
 
-// Dummy data - replace with real API or data source
-const catImages = [
-  { id: 1, title: "Cat Prime Minister", url: "path/to/cat1.jpg" },
-];
-
 const Gallery = () => {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-    // Fetch images from an API or use static data
-    setImages(catImages);
-    // In a real app, you might fetch from an API like this:
-    // fetch('/api/cat-images').then(res => res.json()).then(setImages)
+    // URL for TheCatAPI
+    const apiUrl = 'https://api.thecatapi.com/v1/images/search?limit=10';
+    
+    // Fetch images from TheCatAPI
+    fetch(apiUrl, {
+      headers: {
+        'x-api-key': process.env.REACT_APP_CAT_API_KEY // Use your API key from .env
+      }
+    })
+    .then(res => res.json())
+    .then(data => {
+      // Transform the data into the format expected by your gallery
+      const transformedData = data.map(cat => ({
+        id: cat.id,
+        title: `Cat #${cat.id}`, // You can modify the title as you like
+        url: cat.url
+      }));
+      setImages(transformedData);
+    })
+    .catch(error => {
+      console.error('Error fetching data from TheCatAPI', error);
+    });
   }, []);
 
   return (
