@@ -5,7 +5,6 @@ const eventsMock = [
   { id: 1, title: 'Purrliament Debate', date: '2024-01-15', description: 'Discussing the most pressing issues in Catnadia!' },
   { id: 2, title: 'Meow Town Hall', date: '2024-02-10', description: 'A public gathering for all feline citizens!' },
   { id: 3, title: 'Fishy Economics Summit', date: '2024-03-05', description: 'Debating the future of fish trade in Catnadia.' },
-  // Add more events here
 ];
 
 const CatnadianEventsList = () => {
