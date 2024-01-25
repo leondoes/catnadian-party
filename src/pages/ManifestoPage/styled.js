@@ -1,6 +1,5 @@
 import styled, { keyframes } from 'styled-components';
 
-// Animations
 const fadeIn = keyframes`
   from {
     opacity: 0;
@@ -12,8 +11,7 @@ const fadeIn = keyframes`
   }
 `;
 
-// Styled Components
-const ManifestoContainer = styled.div`
+export const ManifestoContainer = styled.div`
   animation: ${fadeIn} 1s ease-out;
   padding: 20px;
   background-color: #f0f8ff; // Light blue background
@@ -21,22 +19,22 @@ const ManifestoContainer = styled.div`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
 
-const Title = styled.h1`
+export const Title = styled.h1`
   color: #333366; // Dark blue color
   text-align: center;
 `;
 
-const Paragraph = styled.p`
+export const Paragraph = styled.p`
   color: #666666; // Dark grey text
   line-height: 1.6;
 `;
 
-const ManifestoList = styled.ul`
+export const ManifestoList = styled.ul`
   list-style: none;
   padding: 0;
 `;
 
-const ListItem = styled.li`
+export const ListItem = styled.li`
   margin: 10px 0;
   padding: 10px;
   background-color: #e6e6fa; // Lavender background
@@ -50,6 +48,6 @@ const ListItem = styled.li`
   }
 `;
 
-const StrongText = styled.strong`
+export const StrongText = styled.strong`
   color: #ff4500; // Orange color for emphasis
 `;
