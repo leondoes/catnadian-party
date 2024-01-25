@@ -1,6 +1,7 @@
 import React from "react";
 import {
   ManifestoContainer,
+  ManifestoList,
   Paragraph,
   ListItem,
   Title,
