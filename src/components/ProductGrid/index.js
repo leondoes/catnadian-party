@@ -1,20 +1,22 @@
 import React, { useContext } from 'react';
 import { CartContext } from '../CartContext';
+import { Grid, Product, Image, Name, Price, Button, Description } from './styled';
 
 const ProductGrid = ({ products }) => {
   const { addToCart } = useContext(CartContext);
 
   return (
-    <div className="product-grid">
+    <Grid>
       {products.map(product => (
-        <div key={product.id} className="product">
-          <img src={product.image} alt={product.name} />
-          <h3>{product.name}</h3>
-          <p>{product.price}</p>
-          <button onClick={() => addToCart(product)}>Add to Cart</button>
-        </div>
+        <Product key={product.id}>
+          <Image src={product.image} alt={product.name} />
+          <Name>{product.name}</Name>
+          <Price>{product.price}</Price>
+          <Description>{product.description || "No description available"}</Description>
+          <Button onClick={() => addToCart(product)}>Add to Cart</Button>
+        </Product>
       ))}
-    </div>
+    </Grid>
   );
 };
 
