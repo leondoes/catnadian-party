@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/catnadian-party/static/css/main.06af4004.css",
-    "main.js": "/catnadian-party/static/js/main.6b0e3f5b.js",
+    "main.js": "/catnadian-party/static/js/main.36e20de7.js",
     "static/media/logo.png": "/catnadian-party/static/media/logo.f91affcf0493a91ee048.png",
     "index.html": "/catnadian-party/index.html",
-    "main.6b0e3f5b.js.map": "/catnadian-party/static/js/main.6b0e3f5b.js.map"
+    "main.36e20de7.js.map": "/catnadian-party/static/js/main.36e20de7.js.map"
   },
   "entrypoints": [
     "static/css/main.06af4004.css",
-    "static/js/main.6b0e3f5b.js"
+    "static/js/main.36e20de7.js"
   ]
 }
