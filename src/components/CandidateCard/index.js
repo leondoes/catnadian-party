@@ -1,13 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Card, Image, Name, Bio } from "./styled";
 
 const CandidateCard = ({ name, photo, bio }) => {
   return (
-    <div className="candidate-card">
-      <img src={photo} alt={`${name}`} className="candidate-photo" />
-      <h3>{name}</h3>
-      <p>{bio}</p>
-    </div>
+    <Card>
+      <Image src={photo} alt={name} />
+      <Name>{name}</Name>
+      <Bio>{bio}</Bio>
+    </Card>
   );
 };
 
