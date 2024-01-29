@@ -1,13 +1,27 @@
 {
   "files": {
     "main.css": "/catnadian-party/static/css/main.06af4004.css",
-    "main.js": "/catnadian-party/static/js/main.36e20de7.js",
+    "main.js": "/catnadian-party/static/js/main.60869d4d.js",
+    "static/media/chairmanmeow.jpg": "/catnadian-party/static/media/chairmanmeow.e499b0b83d3ea49e4573.jpg",
+    "static/media/simba.jpg": "/catnadian-party/static/media/simba.b768bb969adbf18e8bd5.jpg",
+    "static/media/shadow.jpg": "/catnadian-party/static/media/shadow.20790c9b748bbe059eeb.jpg",
+    "static/media/paws.jpg": "/catnadian-party/static/media/paws.9066110484aa638c2805.jpg",
+    "static/media/felix.jpg": "/catnadian-party/static/media/felix.82f55c7b92a9e17ed677.jpg",
+    "static/media/coco.jpg": "/catnadian-party/static/media/coco.0a4e7c9dc12163cceea5.jpg",
+    "static/media/luna.jpg": "/catnadian-party/static/media/luna.05959373ca03ec5f92d2.jpg",
+    "static/media/socks.jpg": "/catnadian-party/static/media/socks.b2b8e415137c6baafd2a.jpg",
+    "static/media/ginger.jpg": "/catnadian-party/static/media/ginger.797e56828e93e662348b.jpg",
+    "static/media/biscuit.jpg": "/catnadian-party/static/media/biscuit.a8219d920c75678d1a77.jpg",
+    "static/media/whiskers.jpg": "/catnadian-party/static/media/whiskers.d61595f8a2b7599a39d7.jpg",
+    "static/media/boots.jpg": "/catnadian-party/static/media/boots.fb93bff7474bb8e31fbf.jpg",
+    "static/media/mittens.jpg": "/catnadian-party/static/media/mittens.f09df4b7541cad6c495f.jpg",
+    "static/media/tiger.jpg": "/catnadian-party/static/media/tiger.e9d360633763ca8b779f.jpg",
     "static/media/logo.png": "/catnadian-party/static/media/logo.f91affcf0493a91ee048.png",
     "index.html": "/catnadian-party/index.html",
-    "main.36e20de7.js.map": "/catnadian-party/static/js/main.36e20de7.js.map"
+    "main.60869d4d.js.map": "/catnadian-party/static/js/main.60869d4d.js.map"
   },
   "entrypoints": [
     "static/css/main.06af4004.css",
-    "static/js/main.36e20de7.js"
+    "static/js/main.60869d4d.js"
   ]
 }
