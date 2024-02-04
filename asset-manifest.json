@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/catnadian-party/static/css/main.06af4004.css",
-    "main.js": "/catnadian-party/static/js/main.60869d4d.js",
+    "main.js": "/catnadian-party/static/js/main.ce663633.js",
     "static/media/chairmanmeow.jpg": "/catnadian-party/static/media/chairmanmeow.e499b0b83d3ea49e4573.jpg",
     "static/media/simba.jpg": "/catnadian-party/static/media/simba.b768bb969adbf18e8bd5.jpg",
     "static/media/shadow.jpg": "/catnadian-party/static/media/shadow.20790c9b748bbe059eeb.jpg",
@@ -12,16 +12,26 @@
     "static/media/socks.jpg": "/catnadian-party/static/media/socks.b2b8e415137c6baafd2a.jpg",
     "static/media/ginger.jpg": "/catnadian-party/static/media/ginger.797e56828e93e662348b.jpg",
     "static/media/biscuit.jpg": "/catnadian-party/static/media/biscuit.a8219d920c75678d1a77.jpg",
+    "static/media/whisker_notebook.jpg": "/catnadian-party/static/media/whisker_notebook.d896a1a647788ec99a3b.jpg",
     "static/media/whiskers.jpg": "/catnadian-party/static/media/whiskers.d61595f8a2b7599a39d7.jpg",
     "static/media/boots.jpg": "/catnadian-party/static/media/boots.fb93bff7474bb8e31fbf.jpg",
     "static/media/mittens.jpg": "/catnadian-party/static/media/mittens.f09df4b7541cad6c495f.jpg",
+    "static/media/stickers_set.jpg": "/catnadian-party/static/media/stickers_set.7b8d272481bd2fac61b2.jpg",
+    "static/media/coalition_cap.jpg": "/catnadian-party/static/media/coalition_cap.1b161792a36f1e5e6a5d.jpg",
     "static/media/tiger.jpg": "/catnadian-party/static/media/tiger.e9d360633763ca8b779f.jpg",
+    "static/media/freedom_flag.jpg": "/catnadian-party/static/media/freedom_flag.3699a43eb7ca114a156c.jpg",
+    "static/media/manifesto_poster.jpg": "/catnadian-party/static/media/manifesto_poster.27d28f19ba2629556dff.jpg",
+    "static/media/catnadian_tshirt.jpg": "/catnadian-party/static/media/catnadian_tshirt.b9a728d2f55429d659f0.jpg",
+    "static/media/caucus_keychain.jpg": "/catnadian-party/static/media/caucus_keychain.1610222783757882468d.jpg",
+    "static/media/politics_pillow.jpg": "/catnadian-party/static/media/politics_pillow.6089e750e66302623c4c.jpg",
+    "static/media/party_pennant.jpg": "/catnadian-party/static/media/party_pennant.5878cf8990c4d5111eef.jpg",
+    "static/media/leader_mug.jpg": "/catnadian-party/static/media/leader_mug.439d2f93a9ff6e03174d.jpg",
     "static/media/logo.png": "/catnadian-party/static/media/logo.f91affcf0493a91ee048.png",
     "index.html": "/catnadian-party/index.html",
-    "main.60869d4d.js.map": "/catnadian-party/static/js/main.60869d4d.js.map"
+    "main.ce663633.js.map": "/catnadian-party/static/js/main.ce663633.js.map"
   },
   "entrypoints": [
     "static/css/main.06af4004.css",
-    "static/js/main.60869d4d.js"
+    "static/js/main.ce663633.js"
   ]
 }
