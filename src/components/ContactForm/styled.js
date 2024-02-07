@@ -31,6 +31,7 @@ export const StyledTextArea = styled.textarea`
 `;
 
 export const StyledButton = styled.button`
+font-family: 'Noto+Sans';
     padding: 10px 20px;
     background-color: #007bff;
     color: white;

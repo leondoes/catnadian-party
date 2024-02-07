@@ -14,6 +14,7 @@ const linkFadeIn = keyframes`
 `;
 
 export const Nav = styled.nav`
+font-family: 'Noto Sans';
   background-color: #333;
   color: white;
   display: flex;
