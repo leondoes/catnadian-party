@@ -23,11 +23,11 @@ export const PageContainer = styled.div`
 `;
 
 export const Title = styled.div`
-  font-family: 'Kalnia', sans-serif; /* Example font */
+  font-family: 'Noto Sans', sans-serif;
   font-variant: small-caps;
-  font-weight: 700;
-  font-size: 4rem; /* Example size */
-  color: #d35400; /* Example color */
+  font-weight: 900;
+  font-size: 4rem;
+  color: #d35400;
   text-align: center;
   margin: 20px 0;
   text-shadow: 1px 1px 2px grey;
