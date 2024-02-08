@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import img from '../../assets/logo.png';
 import { SplashPicture, PageContainer, Title } from './styled';
 
@@ -7,10 +7,10 @@ const SplashPage = () => {
   const [showMeta, setShowMeta] = useState(false);
 
   useEffect(() => {
-    // Set a delay of 5000 milliseconds (5 seconds) to update the state
-    const timer = setTimeout(() => setShowMeta(true), 5000);
+    // Set a delay of 5000 milliseconds (5 seconds) to show the meta tag
+    const timer = setTimeout(() => setShowMeta(true), 3000);
 
-    // Cleanup function to clear the timer if the component unmounts
+    // Cleanup to prevent memory leak if the component unmounts before the timer fires
     return () => clearTimeout(timer);
   }, []);
 
@@ -22,7 +22,11 @@ const SplashPage = () => {
         </Helmet>
       )}
       <PageContainer>
-        <Title>The Catnadian Party of Canada</Title>
+        <Title>The Catnadian Party of Canada</Title>{showMeta && (
+        <div>
+          sdsadsa
+        </div>
+      )}
         <SplashPicture>
           <img src={img} alt="Splash" />
         </SplashPicture>
