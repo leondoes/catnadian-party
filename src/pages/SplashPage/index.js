@@ -4,7 +4,7 @@ import img from '../../assets/logo.png';
 import { SplashPicture, PageContainer, Title } from './styled';
 
 const SplashPage = () => {
-  const [showMeta, setShowMeta] = useState(false);
+  const [showMeta, setShowMeta] = useState(true);
 
   useEffect(() => {
     // Set a delay of 5000 milliseconds (5 seconds) to show the meta tag
