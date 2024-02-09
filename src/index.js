@@ -1,7 +1,6 @@
 import ReactDOM from "react-dom/client";
 import { StrictMode } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
 
 import App from "./App"; // Your main App component
 
@@ -13,9 +12,7 @@ root.render(
         <Route
           path="/*"
           element={
-            <HelmetProvider>
               <App />
-            </HelmetProvider>
           }
         />
       </Routes>
