@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 
-// Mocked data for Catnadian events
 const eventsMock = [
   { id: 1, title: 'Purrliament Debate', date: '2024-01-15', description: 'Discussing the most pressing issues in Catnadia!' },
   { id: 2, title: 'Meow Town Hall', date: '2024-02-10', description: 'A public gathering for all feline citizens!' },
