@@ -21,11 +21,13 @@ const Gallery = () => {
 
         // Randomly select a province
         const provinces = Object.keys(locations.Canada);
-        const randomProvince = provinces[Math.floor(Math.random() * provinces.length)];
+        const randomProvinceIndex = Math.floor(Math.random() * provinces.length);
+        const randomProvince = provinces[randomProvinceIndex];
 
         // Randomly select a city within the selected province
         const cities = locations.Canada[randomProvince];
-        const randomCity = cities[Math.floor(Math.random() * cities.length)];
+        const randomCityIndex = Math.floor(Math.random() * cities.length);
+        const randomCity = cities[randomCityIndex];
 
         // Generate a random donation amount
         const donationAmount = Math.round(Math.random() * (1700 - 20) + 20);
