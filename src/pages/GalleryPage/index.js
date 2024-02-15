@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import catNamesData from '../../assets/cat_names.json';
 import locations from '../../assets/locations.json';
+import { GalleryContainer, GalleryItem, ImageTitle, CatImage } from './styled.js';
 
 const Gallery = () => {
   const [images, setImages] = useState([]);
@@ -16,23 +17,14 @@ const Gallery = () => {
     .then(res => res.json())
     .then(data => {
       const transformedData = data.map(cat => {
-        // Randomly select a cat name
         const randomCatName = catNamesData.cat_names[Math.floor(Math.random() * catNamesData.cat_names.length)];
-
-        // Randomly select a province
         const provinces = Object.keys(locations.Canada);
         const randomProvinceIndex = Math.floor(Math.random() * provinces.length);
         const randomProvince = provinces[randomProvinceIndex];
-
-        // Randomly select a city within the selected province
         const cities = locations.Canada[randomProvince];
         const randomCityIndex = Math.floor(Math.random() * cities.length);
         const randomCity = cities[randomCityIndex];
-
-        // Generate a random donation amount
         const donationAmount = Math.round(Math.random() * (1700 - 20) + 20);
-
-        // Construct the title with the cat name, donation amount, city, and province
         const title = `${randomCatName} has donated $${donationAmount} from ${randomCity}, ${randomProvince}`;
 
         return {
@@ -49,14 +41,14 @@ const Gallery = () => {
   }, []);
 
   return (
-    <div className="gallery">
+    <GalleryContainer>
       {images.map((image) => (
-        <div key={image.id} className="gallery-item">
-          <h2>{image.title}</h2>
-          <img src={image.url} alt={image.title} />
-        </div>
+        <GalleryItem key={image.id}>
+          <ImageTitle>{image.title}</ImageTitle>
+          <CatImage src={image.url} alt={image.title} />
+        </GalleryItem>
       ))}
-    </div>
+    </GalleryContainer>
   );
 };
 
