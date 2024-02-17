@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import catNamesData from '../../assets/cat_names.json';
 import locations from '../../assets/locations.json';
-import { GalleryContainer, GalleryItem, ImageTitle, CatImage } from './styled.js';
+import { DonationsContainer, DonationsItem, ImageTitle, CatImage } from './styled.js';
 
-const Gallery = () => {
+const Donations = () => {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
@@ -41,15 +41,15 @@ const Gallery = () => {
   }, []);
 
   return (
-    <GalleryContainer>
+    <DonationsContainer>
       {images.map((image) => (
-        <GalleryItem key={image.id}>
+        <DonationsItem key={image.id}>
           <ImageTitle>{image.title}</ImageTitle>
           <CatImage src={image.url} alt={image.title} />
-        </GalleryItem>
+        </DonationsItem>
       ))}
-    </GalleryContainer>
+    </DonationsContainer>
   );
 };
 
-export default Gallery;
+export default Donations;
