@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const GalleryContainer = styled.div`
+export const DonationsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -9,7 +9,7 @@ export const GalleryContainer = styled.div`
   background-color: #f0f0f0;
 `;
 
-export const GalleryItem = styled.div`
+export const DonationsItem = styled.div`
   width: 300px;
   border: 1px solid #ddd;
   border-radius: 8px;
