@@ -9,7 +9,7 @@ import HomePage from '../src/pages/HomePage';
 import CandidatesPage from '../src/pages/CandidatesPage';
 import ContactPage from '../src/pages/ContactPage';
 import EventsPage from '../src/pages/EventsPage';
-import GalleryPage from '../src/pages/GalleryPage';
+import DonationsPage from '../src/pages/DonationsPage';
 import ManifestoPage from '../src/pages/ManifestoPage';
 import MerchandisePage from '../src/pages/MerchandisePage';
 
@@ -26,7 +26,7 @@ const App = () => {
         <Route path="/candidates" element={<CandidatesPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/events" element={<EventsPage />} />
-        <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/donations" element={<DonationsPage />} />
         <Route path="/manifesto" element={<ManifestoPage />} />
         <Route path="/merchandise" element={<MerchandisePage />} />
         <Route path="/" element={<SplashPage/>} />
