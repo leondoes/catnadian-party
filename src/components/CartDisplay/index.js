@@ -7,14 +7,16 @@ import {
   CartItemImage,
   ItemDetails,
   ItemName,
-  ItemPrice
-} from './styled'; // Import updated styled components
+  ItemPrice,
+  RemoveItemButton // Assuming you have or will create this styled component
+} from './styled';
 
 const CartDisplay = () => {
-  const { cartItems } = useContext(CartContext);
+  const { cartItems, removeFromCart } = useContext(CartContext);
   const [isOpen, setIsOpen] = useState(false);
 
-  const totalPrice = cartItems.reduce((acc, item) => acc + item.price, 0);
+  // Assuming price is a string with $, convert to number and calculate total
+  const totalPrice = cartItems.reduce((acc, item) => acc + parseFloat(item.price.substring(1)), 0);
 
   const toggleDrawer = () => setIsOpen(!isOpen);
 
@@ -25,16 +27,21 @@ const CartDisplay = () => {
       </DrawerButton>
       <CartDrawer isOpen={isOpen}>
         <h2>Cart</h2>
-        {cartItems.map((item, index) => (
-          <CartItem key={index}>
-            <CartItemImage src={item.image} alt={item.name} />
-            <ItemDetails>
-              <ItemName>{item.name}</ItemName>
-              <ItemPrice>${item.price}</ItemPrice>
-            </ItemDetails>
-          </CartItem>
-        ))}
-        <div>Total: ${totalPrice}</div>
+        {cartItems.length > 0 ? (
+          cartItems.map((item, index) => (
+            <CartItem key={index}>
+              <CartItemImage src={item.image} alt={item.name} />
+              <ItemDetails>
+                <ItemName>{item.name}</ItemName>
+                <ItemPrice>${item.price}</ItemPrice>
+                <RemoveItemButton onClick={() => removeFromCart(item.id)}>Remove</RemoveItemButton>
+              </ItemDetails>
+            </CartItem>
+          ))
+        ) : (
+          <p>Your cart is empty.</p>
+        )}
+        <div>Total: ${totalPrice.toFixed(2)}</div>
       </CartDrawer>
     </>
   );
