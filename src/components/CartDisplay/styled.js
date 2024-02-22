@@ -48,3 +48,23 @@ export const ItemName = styled.p`
 export const ItemPrice = styled.p`
   margin: 0;
 `;
+
+export const RemoveItemButton = styled.button`
+  background-color: #ff4d4f; /* A bright color to indicate an action like removal */
+  color: white; /* White text to contrast with the background */
+  border: none; /* No border for a modern look */
+  padding: 5px 10px; /* Padding for button size */
+  cursor: pointer; /* Cursor changes to pointer to indicate clickable */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 0.9rem; /* Font size similar to item details */
+  margin-left: auto; /* Push the button to the right */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+
+  &:hover {
+    background-color: #ff7875; /* Lighter shade on hover */
+  }
+
+  &:focus {
+    outline: none; /* Removes outline to keep the design clean */
+  }
+`;
