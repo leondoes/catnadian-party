@@ -9,7 +9,7 @@ const NavBar = () => {
         <StyledLink to="/candidates">Candidates</StyledLink>
         <StyledLink to="/contact">Contact</StyledLink>
         <StyledLink to="/events">Events</StyledLink>
-        <StyledLink to="/gallery">Gallery</StyledLink>
+        <StyledLink to="/donations">Donations</StyledLink>
         <StyledLink to="/manifesto">Manifesto</StyledLink>
         <StyledLink to="/merchandise">Merchandise</StyledLink>
       </Nav>
