@@ -1,22 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import catNamesData from '../../assets/cat_names.json';
 import locations from '../../assets/locations.json';
-import { DonationsContainer, DonationsItem, ImageTitle, CatImage } from './styled.js';
+import YarnBall from '../../assets/YarnBall.svg';
+import { DonationsContainer, DonationsItem, ImageTitle, CatImage, LoadingIndicator } from './styled.js';
 
 const Donations = () => {
   const [images, setImages] = useState([]);
+  const [isLoading, setIsLoading] = useState(false); // Loading state
 
   const fetchImage = () => {
-    const apiUrl = 'https://api.thecatapi.com/v1/images/search?limit=1'; // Fetching one image at a time
+    setIsLoading(true); // Start loading
+    const apiUrl = 'https://api.thecatapi.com/v1/images/search?limit=1';
 
     fetch(apiUrl, {
       headers: {
-        'x-api-key': process.env.REACT_APP_CAT_API_KEY // Use your API key from .env
+        'x-api-key': process.env.REACT_APP_CAT_API_KEY
       }
     })
     .then(res => res.json())
     .then(data => {
-      const cat = data[0]; // Assuming one image is fetched
+      const cat = data[0];
       const randomCatName = catNamesData.cat_names[Math.floor(Math.random() * catNamesData.cat_names.length)];
       const provinces = Object.keys(locations.Canada);
       const randomProvinceIndex = Math.floor(Math.random() * provinces.length);
@@ -33,30 +36,38 @@ const Donations = () => {
         url: cat.url
       };
 
-      // Add the new image to the start of the array and remove the last one if necessary
       setImages(prevImages => [newImage, ...prevImages.slice(0, 9)]);
+      setIsLoading(false); // End loading
     })
     .catch(error => {
       console.error('Error fetching data from TheCatAPI', error);
+      setIsLoading(false); // End loading even if there's an error
     });
   };
 
   useEffect(() => {
+    fetchImage(); // Fetch the first image immediately on mount
     const intervalId = setInterval(() => {
       fetchImage();
-    }, Math.random() * 9000 + 1000); // Between 1 and 10 seconds
+    }, Math.random() * 5000 + 5000); // Between 1 and 10 seconds
 
-    return () => clearInterval(intervalId); // Cleanup the interval on component unmount
+    return () => clearInterval(intervalId);
   }, []);
 
   return (
     <DonationsContainer>
-      {images.map((image, index) => (
-        <DonationsItem key={image.id} style={{ transform: `translateX(-${index * 100}%)` }}>
-          <ImageTitle>{image.title}</ImageTitle>
-          <CatImage src={image.url} alt={image.title} />
-        </DonationsItem>
-      ))}
+      {isLoading ? (
+       <LoadingIndicator>
+       <img src={YarnBall} alt="Loading..." />
+     </LoadingIndicator>
+      ) : (
+        images.map((image, index) => (
+          <DonationsItem key={image.id} style={{ transform: `translateX(-${index * 100}%)` }}>
+            <ImageTitle>{image.title}</ImageTitle>
+            <CatImage src={image.url} alt={image.title} />
+          </DonationsItem>
+        ))
+      )}
     </DonationsContainer>
   );
 };

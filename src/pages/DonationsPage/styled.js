@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 
 export const DonationsContainer = styled.div`
   display: flex;
@@ -40,4 +40,22 @@ export const CatImage = styled.img`
   height: 100%; // Adjust height to fill the item container
   object-fit: cover; // Ensure image covers the item area without distortion
   display: block;
+`;
+
+const rotate = keyframes`
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+export const LoadingIndicator = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  animation: ${rotate} 2s linear infinite;
 `;
