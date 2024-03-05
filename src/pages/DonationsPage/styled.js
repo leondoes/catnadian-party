@@ -6,7 +6,7 @@ export const DonationsContainer = styled.div`
   overflow-x: hidden; // Hide overflow to enable the carousel effect
   position: relative; // Position relative to allow absolute positioning of items
   width: 100%; // Ensure the container takes full width
-  height: 100vh; // Set to the height of the viewport for full screen display
+  height: 80vh; // Set to the height of the viewport for full screen display
   align-items: center; // Center items vertically
   justify-content: flex-start; // Start aligning items from the left
 `;
@@ -36,11 +36,15 @@ export const ImageTitle = styled.h2`
 `;
 
 export const CatImage = styled.img`
-  width: 100%;
-  height: 100%; // Adjust height to fill the item container
-  object-fit: cover; // Ensure image covers the item area without distortion
+  max-width: 100%; // Ensure image is responsive but does not exceed the width of its container
+  max-height: 80vh; // Adjust based on your design needs
+  object-fit: contain; // Keeps the entire image visible
   display: block;
+  margin: 0; // Ensure there's no margin
+  padding: 0; // Ensure there's no padding
 `;
+
+
 
 const rotate = keyframes`
   from {
