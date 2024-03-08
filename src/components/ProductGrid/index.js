@@ -24,7 +24,6 @@ const ProductGrid = ({ products }) => {
         <Product key={product.id} onClick={() => openModal(product)}>
           <Image src={product.image} alt={product.name} />
           <Name>{product.name}</Name>
-          {/* Remove Price, Description, and Button from here if you want them only in the modal */}
         </Product>
       ))}
       <Modal isOpen={isModalOpen} closeModal={closeModal}>

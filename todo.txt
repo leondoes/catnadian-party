@@ -41,3 +41,5 @@ Technical Considerations
 React Router: For seamless navigation between pages without reloading.
 State Management (e.g., Redux or Context API): To manage state across components, especially if you have dynamic content.
 API Integration: If you plan to fetch news or other dynamic content from external sources.
+
+Move Manifesto, Events and Contact to splashpage
