@@ -36,12 +36,16 @@ export const ImageTitle = styled.h2`
 `;
 
 export const CatImage = styled.img`
-
+  width: 100%;
+  height: 100%; // Adjust height to fill the item container
   max-width: 60%; // Set a maximum width to ensure it doesn't take over the whole page
   max-height: 60vh; // Set a maximum height relative to the viewport height
   width: auto; // Adjust width automatically to maintain aspect ratio
   height: auto; // Adjust height automatically to maintain aspect ratio
   object-fit: cover; // Ensure image covers the item area without distortion
+  display: block;
+`;
+
 
 const rotate = keyframes`
   from {
