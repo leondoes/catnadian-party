@@ -7,10 +7,7 @@ import NavBar from '../src/components/NavBar';
 import SplashPage from '../src/pages/SplashPage';
 import HomePage from '../src/pages/HomePage';
 import CandidatesPage from '../src/pages/CandidatesPage';
-import ContactPage from '../src/pages/ContactPage';
-import EventsPage from '../src/pages/EventsPage';
 import DonationsPage from '../src/pages/DonationsPage';
-import ManifestoPage from '../src/pages/ManifestoPage';
 import MerchandisePage from '../src/pages/MerchandisePage';
 
 const App = () => {
@@ -24,10 +21,7 @@ const App = () => {
       <Routes>
         <Route path="/home" element={<HomePage />} />
         <Route path="/candidates" element={<CandidatesPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/events" element={<EventsPage />} />
         <Route path="/donations" element={<DonationsPage />} />
-        <Route path="/manifesto" element={<ManifestoPage />} />
         <Route path="/merchandise" element={<MerchandisePage />} />
         <Route path="/" element={<SplashPage/>} />
       </Routes>
