@@ -36,15 +36,12 @@ export const ImageTitle = styled.h2`
 `;
 
 export const CatImage = styled.img`
-  max-width: 100%; // Ensure image is responsive but does not exceed the width of its container
-  max-height: 80vh; // Adjust based on your design needs
-  object-fit: contain; // Keeps the entire image visible
-  display: block;
-  margin: 0; // Ensure there's no margin
-  padding: 0; // Ensure there's no padding
-`;
 
-
+  max-width: 60%; // Set a maximum width to ensure it doesn't take over the whole page
+  max-height: 60vh; // Set a maximum height relative to the viewport height
+  width: auto; // Adjust width automatically to maintain aspect ratio
+  height: auto; // Adjust height automatically to maintain aspect ratio
+  object-fit: cover; // Ensure image covers the item area without distortion
 
 const rotate = keyframes`
   from {
