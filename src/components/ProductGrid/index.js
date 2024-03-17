@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { CartContext } from '../CartContext';
-import { Grid, Product, Image, Name, Price, Button, Description, QuantityInput } from './styled';
+import { Grid, Product, Image, Name, Price, Button, Description} from './styled';
 import Modal from '../ProductModal'; // Import the Modal component
 
 const ProductGrid = ({ products }) => {
