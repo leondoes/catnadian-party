@@ -41,7 +41,7 @@ const ProductGrid = ({ products }) => {
             <Price>{selectedProduct.price}</Price>
             <Description>{selectedProduct.description}</Description>
             {/* Quantity input */}
-            <QuantityInput 
+            <input 
               type="number" 
               value={quantity} 
               onChange={(e) => setQuantity(Math.max(1, parseInt(e.target.value, 10)))} // Ensure quantity is at least 1
