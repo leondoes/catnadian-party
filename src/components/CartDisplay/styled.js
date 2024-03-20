@@ -68,3 +68,11 @@ export const RemoveItemButton = styled.button`
     outline: none; /* Removes outline to keep the design clean */
   }
 `;
+
+export const ItemQuantity = styled.p`
+  font-size: 0.9rem; /* Matches the font size of the RemoveItemButton for consistency */
+  color: #333; /* A darker color for good readability */
+  margin: 5px 0; /* Adds a little space above and below for visual separation */
+  font-weight: bold; /* Makes it stand out slightly, emphasizing the quantity */
+`;
+
