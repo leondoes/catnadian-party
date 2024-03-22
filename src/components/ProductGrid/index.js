@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { CartContext } from '../CartContext';
-import { Grid, Product, Image, Name, Price, Button, Description} from './styled';
+import { Grid, Product, Image, Name, Price, Button, Description, FeatureList, FeatureItem } from './styled'; // Assume FeatureList and FeatureItem are styled components for displaying features
 import Modal from '../ProductModal'; // Import the Modal component
 
 const ProductGrid = ({ products }) => {
@@ -25,6 +25,27 @@ const ProductGrid = ({ products }) => {
     closeModal(); // Close the modal after adding to cart
   };
 
+  // Helper function to render product features if available
+  const renderFeatures = (product) => {
+    const features = [];
+
+    // Conditional rendering based on product attributes
+    if (product.material) {
+      features.push(<FeatureItem key="material">Material: {product.material}</FeatureItem>);
+    }
+    if (product.sizes) {
+      features.push(<FeatureItem key="sizes">Sizes: {product.sizes}</FeatureItem>);
+    }
+    if (product.colors) {
+      features.push(<FeatureItem key="colors">Colors: {product.colors.join(', ')}</FeatureItem>);
+    }
+    if (product.features) {
+      product.features.forEach((feature, index) => features.push(<FeatureItem key={`feature-${index}`}>{feature}</FeatureItem>));
+    }
+
+    return features.length ? <FeatureList>{features}</FeatureList> : null;
+  };
+
   return (
     <Grid>
       {products.map(product => (
@@ -40,6 +61,8 @@ const ProductGrid = ({ products }) => {
             <Name>{selectedProduct.name}</Name>
             <Price>{selectedProduct.price}</Price>
             <Description>{selectedProduct.description}</Description>
+            {/* Render additional features if available */}
+            {renderFeatures(selectedProduct)}
             {/* Quantity input */}
             <input 
               type="number" 
