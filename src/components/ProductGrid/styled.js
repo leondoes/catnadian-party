@@ -60,3 +60,7 @@ export const Description = styled.p`
   font-size: 14px;
   text-align: center;
 `;
+
+export const FeatureItem = styled.div``;
+
+export const FeatureList = styled.div``;
