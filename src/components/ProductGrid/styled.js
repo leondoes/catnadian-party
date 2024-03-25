@@ -61,6 +61,14 @@ export const Description = styled.p`
   text-align: center;
 `;
 
-export const FeatureItem = styled.div``;
+export const FeatureItem = styled.div`
+  color: #555;
+  font-size: 14px;
+  text-align: center;
+`;
 
-export const FeatureList = styled.div``;
+export const FeatureList = styled.div`
+  color: #555;
+  font-size: 14px;
+  text-align: center;
+`;
