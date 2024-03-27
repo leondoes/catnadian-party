@@ -108,6 +108,17 @@ const catnadianPartyProducts = [
     material: "Metal",
     features: ["Durable construction", "Charm included"],
   },
+  {
+    id: 10,
+    name: "Manifesto of Meows Poster",
+    price: "$8.99",
+    image: manifesto_poster,
+    description:
+      "Inspire your walls with the Manifesto of Meows Poster, encapsulating the Catnadian Party's vision. Printed on high-quality, glossy paper for a vibrant display. Ideal for offices, living spaces, or as a gift for the politically savvy cat lover.",
+    material: "Glossy paper",
+    dimensions: "24 x 36 inches",
+    features: ["High-quality print", "Vibrant colors"],
+  },
 ];
 
 export default catnadianPartyProducts;
