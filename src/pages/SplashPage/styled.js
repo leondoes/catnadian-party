@@ -22,6 +22,33 @@ export const PageContainer = styled.div`
   }
 `;
 
+const slideInFromBottom = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(100px); // starts the component 100px below its final position
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+export const StyledManifesto = styled.div`
+  animation: ${slideInFromBottom} 0.5s ease-out forwards;
+  visibility: hidden; // Initially hidden, will be made visible on scroll
+`;
+
+// Repeat for other components as needed, adjusting durations or delays for variety
+export const StyledContactForm = styled.div`
+  animation: ${slideInFromBottom} 0.5s 0.2s ease-out forwards;
+  visibility: hidden;
+`;
+
+export const StyledCatnadianEventsList = styled.div`
+  animation: ${slideInFromBottom} 0.5s 0.4s ease-out forwards;
+  visibility: hidden;
+`;
+
 export const Title = styled.div`
   font-family: 'Noto Sans', sans-serif;
   font-variant: small-caps;
