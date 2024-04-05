@@ -39,7 +39,7 @@ font-family: 'Noto Sans';
 export const StyledLink = styled(NavLink)`
   color: white;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 4rem;
   transition: color 0.3s ease, transform 0.2s ease-out;
   animation: ${linkFadeIn} 0.5s ease-out;
 
