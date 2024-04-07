@@ -1,24 +1,40 @@
-/*
-Header Component: With the party logo and navigation menu.
-Banner Component: Featuring a catchy slogan and a humorous image of a cat in a political setting.
-About the Party Component: Brief introduction to the cat political party.
-News Feed Component: Displaying the latest "political updates" from the party.
-Footer Component: With contact information and social media links.
-*/
+import React, { useState, useEffect } from 'react';
+// Import styled components
+import { PageContainer, Title, StyledManifesto, StyledContactForm, StyledCatnadianEventsList } from './styled';
+// Import components
+import ManifestoComponent from '../../components/Manifesto';
+import ContactForm from '../../components/ContactForm';
+import CatnadianEventsList from '../../components/Events';
 
-import React from "react";
+const SplashPage = () => {
+  const [isVisible, setIsVisible] = useState(false);
 
-import PageLayout from "../../layout/PageLayout";
+  useEffect(() => {
+    const onScroll = () => {
+      const scrollCheck = window.scrollY > 100; // Adjust as needed
+      setIsVisible(scrollCheck);
+    };
 
-import {} from "./styled";
+    document.addEventListener("scroll", onScroll);
 
-const HomePage = () => {
+    return () => {
+      document.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+
   return (
-    <PageLayout>
-      <div>Hello</div>
-      <div>Hello</div>
-      <div>Hello</div>
-    </PageLayout>
+    <PageContainer>
+      <Title>The Catnadian Party of Canada</Title>
+      <StyledManifesto style={{visibility: isVisible ? 'visible' : 'hidden'}}>
+        <ManifestoComponent />
+      </StyledManifesto>
+      <StyledContactForm style={{visibility: isVisible ? 'visible' : 'hidden'}}>
+        <ContactForm />
+      </StyledContactForm>
+      <StyledCatnadianEventsList style={{visibility: isVisible ? 'visible' : 'hidden'}}>
+        <CatnadianEventsList />
+      </StyledCatnadianEventsList>
+    </PageContainer>
   );
 };
 
