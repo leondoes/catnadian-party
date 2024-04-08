@@ -6,7 +6,7 @@ import ManifestoComponent from '../../components/Manifesto';
 import ContactForm from '../../components/ContactForm';
 import CatnadianEventsList from '../../components/Events';
 
-const SplashPage = () => {
+const HomePage = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
