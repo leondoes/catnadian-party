@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/catnadian-party/static/css/main.a520da12.css",
-    "main.js": "/catnadian-party/static/js/main.01289783.js",
+    "main.js": "/catnadian-party/static/js/main.d36ed65f.js",
     "static/media/chairmanmeow.jpg": "/catnadian-party/static/media/chairmanmeow.e499b0b83d3ea49e4573.jpg",
     "static/media/simba.jpg": "/catnadian-party/static/media/simba.b768bb969adbf18e8bd5.jpg",
     "static/media/shadow.jpg": "/catnadian-party/static/media/shadow.20790c9b748bbe059eeb.jpg",
@@ -29,10 +29,10 @@
     "static/media/logo.png": "/catnadian-party/static/media/logo.f91affcf0493a91ee048.png",
     "static/media/YarnBall.svg": "/catnadian-party/static/media/YarnBall.1daa2dbcce112247546974d0ff1aa705.svg",
     "index.html": "/catnadian-party/index.html",
-    "main.01289783.js.map": "/catnadian-party/static/js/main.01289783.js.map"
+    "main.d36ed65f.js.map": "/catnadian-party/static/js/main.d36ed65f.js.map"
   },
   "entrypoints": [
     "static/css/main.a520da12.css",
-    "static/js/main.01289783.js"
+    "static/js/main.d36ed65f.js"
   ]
 }
