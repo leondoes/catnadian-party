@@ -34,19 +34,28 @@ const slideInFromBottom = keyframes`
 `;
 
 export const StyledManifesto = styled.div`
+  opacity: 0; // Start as invisible
   animation: ${slideInFromBottom} 0.5s ease-out forwards;
-  visibility: hidden; // Initially hidden, will be made visible on scroll
+  &.visible {
+    opacity: 1; // Ensure it's visible when the class 'visible' is added
+  }
 `;
 
 // Repeat for other components as needed, adjusting durations or delays for variety
 export const StyledContactForm = styled.div`
-  animation: ${slideInFromBottom} 0.5s 0.2s ease-out forwards;
-  visibility: hidden;
+  opacity: 0; // Start as invisible
+  animation: ${slideInFromBottom} 0.5s ease-out forwards;
+  &.visible {
+    opacity: 1; // Ensure it's visible when the class 'visible' is added
+  }
 `;
 
 export const StyledCatnadianEventsList = styled.div`
-  animation: ${slideInFromBottom} 0.5s 0.4s ease-out forwards;
-  visibility: hidden;
+  opacity: 0; // Start as invisible
+  animation: ${slideInFromBottom} 0.5s ease-out forwards;
+  &.visible {
+    opacity: 1; // Ensure it's visible when the class 'visible' is added
+  }
 `;
 
 export const Title = styled.div`
