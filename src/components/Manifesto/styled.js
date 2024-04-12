@@ -26,7 +26,7 @@ export const Title = styled.h1`
 
 export const Paragraph = styled.p`
   color: #666666; // Dark grey text
-  line-height: 1.6;
+  line-height: 4;
 `;
 
 export const ManifestoList = styled.ul`
