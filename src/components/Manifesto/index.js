@@ -9,6 +9,20 @@ import {
   StrongText,
 } from "./styled";
 
+const ManifestoItem = ({ item }) => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.5  // Adjust this value as needed for your design
+  });
+
+  return (
+    <ListItem ref={ref} className={inView ? 'visible' : ''}>
+      <StrongText>{item.title}:</StrongText> {item.description}
+    </ListItem>
+  );
+};
+
+
 const manifestoItems = [
   {
     title: "More Napping Spots",
@@ -58,18 +72,9 @@ const ManifestoComponent = () => {
       <Title>Catnadian Political Party Manifesto</Title>
       <Paragraph>Welcome to the purr-fect vision of the future! The Catnadian Political Party...</Paragraph>
       <ManifestoList>
-        {manifestoItems.map((item, index) => {
-          const [ref, inView] = useInView({
-            triggerOnce: true,
-            threshold: 0.5  // Adjust this value as needed for your design
-          });
-
-          return (
-            <ListItem ref={ref} className={inView ? 'visible' : ''} key={index}>
-              <StrongText>{item.title}:</StrongText> {item.description}
-            </ListItem>
-          );
-        })}
+        {manifestoItems.map((item, index) => (
+          <ManifestoItem item={item} key={index} />
+        ))}
       </ManifestoList>
       <Paragraph>Join us in making the Catnadian dream a reality for all felines! ...</Paragraph>
     </ManifestoContainer>
@@ -77,3 +82,4 @@ const ManifestoComponent = () => {
 };
 
 export default ManifestoComponent;
+
