@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { forEach, throttle } from "lodash";
 import {
   ManifestoContainer,
   ManifestoList,
@@ -13,7 +14,7 @@ const ManifestoComponent = () => {
 
   const checkVisibility = () => {
     const listItems = listRef.current.childNodes;
-    listItems.forEach(item => {
+    forEach(listItems, (item) => {
       const { top } = item.getBoundingClientRect();
       if (top >= 0 && top <= window.innerHeight) {
         item.classList.add('visible');
@@ -23,10 +24,12 @@ const ManifestoComponent = () => {
     });
   };
 
+  const throttledCheckVisibility = throttle(checkVisibility, 100);
+
   useEffect(() => {
-    window.addEventListener('scroll', checkVisibility, { passive: true });
+    window.addEventListener('scroll', throttledCheckVisibility, { passive: true });
     return () => {
-      window.removeEventListener('scroll', checkVisibility);
+      window.removeEventListener('scroll', throttledCheckVisibility);
     };
   }, []);
 
@@ -65,7 +68,7 @@ const ManifestoComponent = () => {
         <ListItem className="list-item">
           <StrongText>Anti-Dogma Laws:</StrongText> Promoting peace and understanding between all pets by reducing negative stereotypes and encouraging interspecies friendships.
         </ListItem>
-      </ManifestoList>
+        </ManifestoList>
       <Paragraph>Join us in making the Catnadian dream a reality for all felines! ...</Paragraph>
     </ManifestoContainer>
   );
