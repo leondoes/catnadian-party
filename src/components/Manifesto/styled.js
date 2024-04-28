@@ -37,13 +37,34 @@ export const ManifestoList = styled.ul`
 export const ListItem = styled.li`
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transition: opacity 0.5s, transform 0.5s;
   margin: 10px 0;
-  padding: 10px;
+  padding: 20px;
   background-color: #e6e6fa; // Lavender background
-  font-size: 32px;
+  background-size: cover;
+  background-position: center;
+  font-size: 1em; // Adjust font size to fit the design
+  color: #333; // Text color, adjusted for better contrast
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative; // Needed for absolutely positioned elements inside
+  overflow: hidden; // Ensures the content does not bleed outside the border radius
+
+  &:before { // Creates an overlay if needed
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.5); // Semi-transparent overlay for better text readability
+    z-index: 1;
+  }
+
+  & > * {
+    position: relative; // Ensures the content sits above the :before pseudo-element
+    z-index: 2;
+  }
 
   &.visible {
     opacity: 1;
@@ -53,4 +74,6 @@ export const ListItem = styled.li`
 
 export const StrongText = styled.strong`
   color: #ff4500; // Orange color for emphasis
+  font-weight: bold;
+  margin-right: 0.5em; // Add some space after strong text
 `;
