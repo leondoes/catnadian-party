@@ -9,20 +9,20 @@ import {
   StrongText,
 } from "./styled";
 
-import chairmanmeow from "../../../assets/candidates/chairmanmeow.jpg";
-import whiskers from "../../../assets/candidates/whiskers.jpg";
-import paws from "../../../assets/candidates/paws.jpg";
-import mittens from "../../../assets/candidates/mittens.jpg";
-import socks from "../../../assets/candidates/socks.jpg";
-import boots from "../../../assets/candidates/boots.jpg";
-import biscuit from "../../../assets/candidates/biscuit.jpg";
-import coco from "../../../assets/candidates/coco.jpg";
-import tiger from "../../../assets/candidates/tiger.jpg";
-import shadow from "../../../assets/candidates/shadow.jpg";
-import simba from "../../../assets/candidates/simba.jpg";
-import luna from "../../../assets/candidates/luna.jpg";
-import ginger from "../../../assets/candidates/ginger.jpg";
-import felix from "../../../assets/candidates/felix.jpg";
+import chairmanmeow from "../../assets/candidates/chairmanmeow.jpg";
+import whiskers from "../../assets/candidates/whiskers.jpg";
+import paws from "../../assets/candidates/paws.jpg";
+import mittens from "../../assets/candidates/mittens.jpg";
+import socks from "../../assets/candidates/socks.jpg";
+import boots from "../../assets/candidates/boots.jpg";
+import biscuit from "../../assets/candidates/biscuit.jpg";
+import coco from "../../assets/candidates/coco.jpg";
+import tiger from "../../assets/candidates/tiger.jpg";
+import shadow from "../../assets/candidates/shadow.jpg";
+import simba from "../../assets/candidates/simba.jpg";
+import luna from "../../assets/candidates/luna.jpg";
+import ginger from "../../assets/candidates/ginger.jpg";
+import felix from "../../assets/candidates/felix.jpg";
 
 const ManifestoComponent = () => {
   const listRef = useRef(null);
