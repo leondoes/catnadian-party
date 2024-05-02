@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
-import { forEach, throttle } from "lodash";
+import { forEach, throttle } from 'lodash';
+import { shuffle } from "lodash";
 import {
   ManifestoContainer,
   ManifestoList,
@@ -27,7 +28,7 @@ import felix from "../../assets/candidates/felix.jpg";
 const ManifestoComponent = () => {
   const listRef = useRef(null);
 
-  const candidatesImages = [
+  const candidatesImages = shuffle([
     chairmanmeow,
     whiskers,
     paws,
@@ -42,7 +43,7 @@ const ManifestoComponent = () => {
     luna,
     ginger,
     felix,
-  ];
+  ]);
 
   const manifestoPoints = [
     "More Napping Spots: We pledge to increase the number of public and private napping spots, ensuring that every cat has access to comfortable and sunny lounging areas.",
@@ -56,7 +57,6 @@ const ManifestoComponent = () => {
     "Cat Council Representation: Establishing a council of wise felines to advise on national policies and ensure the interests of cats are always considered.",
     "Anti-Dogma Laws: Promoting peace and understanding between all pets by reducing negative stereotypes and encouraging interspecies friendships."
   ];
-  
 
   const checkVisibility = () => {
     const listItems = listRef.current.childNodes;
@@ -77,7 +77,7 @@ const ManifestoComponent = () => {
     return () => {
       window.removeEventListener('scroll', throttledCheckVisibility);
     };
-  }, []);
+  }, [throttledCheckVisibility]);
 
   return (
     <ManifestoContainer>
@@ -85,13 +85,12 @@ const ManifestoComponent = () => {
       <Paragraph>Welcome to the purr-fect vision of the future! The Catnadian Political Party...</Paragraph>
       <ManifestoList ref={listRef}>
         {manifestoPoints.map((point, idx) => {
-          const randomImage = candidatesImages[Math.floor(Math.random() * candidatesImages.length)];
           return (
             <ListItem 
               key={idx} 
               className="list-item" 
               style={{ 
-                backgroundImage: `url(${randomImage})`, 
+                backgroundImage: `url(${candidatesImages[idx % candidatesImages.length]})`, 
                 backgroundSize: 'cover', 
                 backgroundPosition: 'center' 
               }}
