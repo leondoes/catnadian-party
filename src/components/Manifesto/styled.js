@@ -43,7 +43,7 @@ export const ListItem = styled.li`
   background-color: #e6e6fa; // Lavender background
   background-size: cover;
   background-position: center;
-  font-size: 1em; // Adjust font size to fit the design
+  font-size: 2em; // Adjust font size to fit the design
   color: #333; // Text color, adjusted for better contrast
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
