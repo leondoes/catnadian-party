@@ -38,12 +38,12 @@ export const ListItem = styled.li`
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s, transform 0.5s;
-  margin: 10px 0;
-  padding: 20px;
+  margin: 20px 0;
+  padding: 40px;
   background-color: #e6e6fa; // Lavender background
   background-size: cover;
   background-position: center;
-  font-size: 2em; // Adjust font size to fit the design
+  font-size: 3em; // Adjust font size to fit the design
   color: #333; // Text color, adjusted for better contrast
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
