@@ -27,6 +27,7 @@ import felix from "../../assets/candidates/felix.jpg";
 
 const ManifestoComponent = () => {
   const listRef = useRef(null);
+  const containerRef = useRef(null);
 
   const candidatesImages = shuffle([
     chairmanmeow,
@@ -79,8 +80,30 @@ const ManifestoComponent = () => {
     };
   }, [throttledCheckVisibility]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const container = listRef.current;
+      const isBottom = container.scrollHeight - container.scrollTop === container.clientHeight;
+      if (isBottom) {
+        // If it's at the bottom, allow the page to scroll
+        document.body.style.overflow = "auto";
+      } else {
+        // Prevent page scroll when not at bottom
+        document.body.style.overflow = "hidden";
+      }
+    };
+  
+    const container = listRef.current;
+    container.addEventListener('scroll', handleScroll);
+  
+    return () => {
+      container.removeEventListener('scroll', handleScroll);
+      document.body.style.overflow = "auto"; // Reset the overflow when component unmounts
+    };
+  }, []);
+
   return (
-    <ManifestoContainer>
+    <ManifestoContainer ref={containerRef}>
       <Title>Catnadian Political Party Manifesto</Title>
       <Paragraph>Welcome to the purr-fect vision of the future! The Catnadian Political Party...</Paragraph>
       <ManifestoList ref={listRef}>
