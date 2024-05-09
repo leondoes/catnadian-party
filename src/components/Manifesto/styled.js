@@ -12,12 +12,17 @@ const fadeIn = keyframes`
 `;
 
 export const ManifestoContainer = styled.div`
+  position: sticky; // Add this
+  top: 0; // Add this
   animation: ${fadeIn} 1s ease-out;
   padding: 20px;
-  background-color: #f0f8ff; // Light blue background
+  background-color: #f0f8ff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 100vh; // Adjust height to control the visible section
+  overflow-y: auto; // Allows internal scrolling
 `;
+
 
 export const Title = styled.h1`
   color: #333366; // Dark blue color
@@ -39,7 +44,7 @@ export const ListItem = styled.li`
   transform: translateY(20px);
   transition: opacity 0.5s, transform 0.5s;
   margin: 20px 0;
-  padding: 40px;
+  padding: 20px;
   background-color: #e6e6fa; // Lavender background
   background-size: cover;
   background-position: center;
