@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { EventsContainer, EventsTitle, EventList, EventItem, EventTitle, EventDescription } from './styled';
 
 const eventsMock = [
   { id: 1, title: 'Purrliament Debate', date: '2024-01-15', description: 'Discussing the most pressing issues in Catnadia!' },
@@ -18,9 +19,7 @@ const CatnadianEventsList = () => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    // Mock API call to fetch events, replace with real API call in production
     const fetchEvents = async () => {
-      // Simulate API call delay
       setTimeout(() => {
         setEvents(eventsMock);
       }, 1000);
@@ -30,22 +29,22 @@ const CatnadianEventsList = () => {
   }, []);
 
   return (
-    <div className="catnadian-events-list">
-      <h2>Upcoming Catnadian Events</h2>
+    <EventsContainer>
+      <EventsTitle>Upcoming Catnadian Events</EventsTitle>
       {events.length === 0 ? (
-        <p>Loading events...</p>
+        <EventDescription>Loading events...</EventDescription>
       ) : (
-        <ul>
+        <EventList>
           {events.map(event => (
-            <li key={event.id}>
-              <h3>{event.title}</h3>
-              <p>Date: {event.date}</p>
-              <p>{event.description}</p>
-            </li>
+            <EventItem key={event.id}>
+              <EventTitle>{event.title}</EventTitle>
+              <EventDescription>Date: {event.date}</EventDescription>
+              <EventDescription>{event.description}</EventDescription>
+            </EventItem>
           ))}
-        </ul>
+        </EventList>
       )}
-    </div>
+    </EventsContainer>
   );
 };
 
