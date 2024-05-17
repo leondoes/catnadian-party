@@ -72,7 +72,7 @@ export const ToggleButton = styled.button`
     }
 `;
 
-export const ErrorText = styled.span`
+export const ErrorMessage = styled.span`
     color: #dc3545; // Bootstrap's danger color for errors
     font-size: 14px;
     margin-top: -15px; // Pulls the text closer to the input for clear association
