@@ -12,25 +12,26 @@ const fadeIn = keyframes`
 `;
 
 export const ManifestoContainer = styled.div`
-  position: sticky; // Add this
-  top: 0; // Add this
+  position: fixed; // Changed from sticky to fixed
+  top: 0;
+  left: 0;
+  right: 0;
   animation: ${fadeIn} 1s ease-out;
   padding: 20px;
   background-color: #f0f8ff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  height: 100vh; // Adjust height to control the visible section
-  overflow-y: auto; // Allows internal scrolling
+  height: 100vh;
+  overflow-y: auto;
 `;
 
-
 export const Title = styled.h1`
-  color: #333366; // Dark blue color
+  color: #333366;
   text-align: center;
 `;
 
 export const Paragraph = styled.p`
-  color: #666666; // Dark grey text
+  color: #666666;
   line-height: 1.5;
 `;
 
@@ -45,29 +46,27 @@ export const ListItem = styled.li`
   transition: opacity 0.5s, transform 0.5s;
   margin: 20px 0;
   padding: 20px;
-  background-color: #e6e6fa; // Lavender background
-  background-size: cover;
-  background-position: center;
-  font-size: 3em; // Adjust font size to fit the design
-  color: #333; // Text color, adjusted for better contrast
+  background-color: #e6e6fa;
+  font-size: 3em;
+  color: #333;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: relative; // Needed for absolutely positioned elements inside
-  overflow: hidden; // Ensures the content does not bleed outside the border radius
+  position: relative;
+  overflow: hidden;
 
-  &:before { // Creates an overlay if needed
+  &:before {
     content: "";
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(255, 255, 255, 0.5); // Semi-transparent overlay for better text readability
+    background: rgba(255, 255, 255, 0.5);
     z-index: 1;
   }
 
   & > * {
-    position: relative; // Ensures the content sits above the :before pseudo-element
+    position: relative;
     z-index: 2;
   }
 
@@ -78,7 +77,7 @@ export const ListItem = styled.li`
 `;
 
 export const StrongText = styled.strong`
-  color: #ff4500; // Orange color for emphasis
+  color: #ff4500;
   font-weight: bold;
-  margin-right: 0.5em; // Add some space after strong text
+  margin-right: 0.5em;
 `;

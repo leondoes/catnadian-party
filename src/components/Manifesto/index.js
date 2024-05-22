@@ -84,13 +84,7 @@ const ManifestoComponent = () => {
     const handleScroll = () => {
       const container = listRef.current;
       const isBottom = container.scrollHeight - container.scrollTop === container.clientHeight;
-      if (isBottom) {
-        // If it's at the bottom, allow the page to scroll
-        document.body.style.overflow = "auto";
-      } else {
-        // Prevent page scroll when not at bottom
-        document.body.style.overflow = "hidden";
-      }
+      document.body.style.overflow = isBottom ? "auto" : "hidden";
     };
   
     const container = listRef.current;
@@ -101,6 +95,13 @@ const ManifestoComponent = () => {
       document.body.style.overflow = "auto"; // Reset the overflow when component unmounts
     };
   }, []);
+
+  useEffect(() => {
+    window.addEventListener('scroll', throttledCheckVisibility, { passive: true });
+    return () => {
+      window.removeEventListener('scroll', throttledCheckVisibility);
+    };
+  }, [throttledCheckVisibility]);
 
   return (
     <ManifestoContainer ref={containerRef}>
