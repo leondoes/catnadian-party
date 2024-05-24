@@ -5,6 +5,21 @@ export const DrawerButton = styled.button`
   top: 20px;
   right: 20px;
   z-index: 100;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+
+  &:focus {
+    outline: none;
+  }
 `;
 
 export const CartDrawer = styled.div`
@@ -17,27 +32,27 @@ export const CartDrawer = styled.div`
   box-shadow: -2px 0 5px rgba(0,0,0,0.5);
   transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(100%)')};
   transition: transform 0.3s ease-in-out;
-  overflow-y: auto; /* Added to allow scrolling if many items */
-  padding: 20px; /* Adds some padding inside the drawer */
+  overflow-y: auto;
+  padding: 20px;
 `;
 
 export const CartItem = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 15px; /* Spacing between items */
+  margin-bottom: 15px;
 `;
 
 export const CartItemImage = styled.img`
-  width: 50px; /* Fixed width for images */
-  height: 50px; /* Fixed height for images */
-  object-fit: cover; /* Ensure images cover the space without distortion */
-  margin-right: 10px; /* Spacing between image and text */
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
 `;
 
 export const ItemDetails = styled.div`
   flex: 1;
-  margin-left: 10px; /* Spacing between image and details */
+  margin-left: 10px;
 `;
 
 export const ItemName = styled.p`
@@ -50,29 +65,28 @@ export const ItemPrice = styled.p`
 `;
 
 export const RemoveItemButton = styled.button`
-  background-color: #ff4d4f; /* A bright color to indicate an action like removal */
-  color: white; /* White text to contrast with the background */
-  border: none; /* No border for a modern look */
-  padding: 5px 10px; /* Padding for button size */
-  cursor: pointer; /* Cursor changes to pointer to indicate clickable */
-  border-radius: 5px; /* Rounded corners */
-  font-size: 0.9rem; /* Font size similar to item details */
-  margin-left: auto; /* Push the button to the right */
-  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin-left: auto;
+  transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: #ff7875; /* Lighter shade on hover */
+    background-color: #ff7875;
   }
 
   &:focus {
-    outline: none; /* Removes outline to keep the design clean */
+    outline: none;
   }
 `;
 
 export const ItemQuantity = styled.p`
-  font-size: 0.9rem; /* Matches the font size of the RemoveItemButton for consistency */
-  color: #333; /* A darker color for good readability */
-  margin: 5px 0; /* Adds a little space above and below for visual separation */
-  font-weight: bold; /* Makes it stand out slightly, emphasizing the quantity */
+  font-size: 0.9rem;
+  color: #333;
+  margin: 5px 0;
+  font-weight: bold;
 `;
-
