@@ -8,16 +8,20 @@ import {
   ItemDetails,
   ItemName,
   ItemPrice,
-  RemoveItemButton, // Assuming you have or will create this styled component
-  ItemQuantity // Assuming you create this styled component for displaying the quantity
+  RemoveItemButton,
+  ItemQuantity
 } from './styled';
 
 const CartDisplay = () => {
   const { cartItems, removeFromCart } = useContext(CartContext);
   const [isOpen, setIsOpen] = useState(false);
 
-  // Update total price calculation to account for item quantity
-  const totalPrice = cartItems.reduce((acc, item) => acc + (parseFloat(item.price.substring(1)) * item.quantity), 0);
+  const parsePrice = (price) => {
+    const parsed = parseFloat(price.replace(/[^0-9.-]+/g, ""));
+    return isNaN(parsed) ? 0 : parsed;
+  };
+
+  const totalPrice = cartItems.reduce((acc, item) => acc + (parsePrice(item.price) * item.quantity), 0);
 
   const toggleDrawer = () => setIsOpen(!isOpen);
 
@@ -34,8 +38,7 @@ const CartDisplay = () => {
               <CartItemImage src={item.image} alt={item.name} />
               <ItemDetails>
                 <ItemName>{item.name}</ItemName>
-                <ItemPrice>${item.price}</ItemPrice>
-                {/* Display the quantity of each item */}
+                <ItemPrice>${parsePrice(item.price).toFixed(2)}</ItemPrice>
                 <ItemQuantity>Quantity: {item.quantity}</ItemQuantity>
                 <RemoveItemButton onClick={() => removeFromCart(item.id)}>Remove</RemoveItemButton>
               </ItemDetails>
