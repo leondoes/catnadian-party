@@ -1,13 +1,13 @@
 import catnadian_tshirt from "../../assets/products/catnadian_tshirt.jpg";
-import leader_mug from "../../assets/products/leader_mug.jpg"; // Assuming a similar path structure for consistency
-import freedom_flag from "../../assets/products/freedom_flag.jpg"; // Adjusting path to follow provided structure
-import politics_pillow from "../../assets/products/politics_pillow.jpg"; // Direct path given in the object
-import stickers_set from "../../assets/products/stickers_set.jpg"; // Direct path given in the object
-import whisker_notebook from "../../assets/products/whisker_notebook.jpg"; // Direct path given in the object
-import coalition_cap from "../../assets/products/coalition_cap.jpg"; // Direct path given in the object
-import party_pennant from "../../assets/products/party_pennant.jpg"; // Direct path given in the object
-import caucus_keychain from "../../assets/products/caucus_keychain.jpg"; // Assuming a similar path structure for consistency
-import manifesto_poster from "../../assets/products/manifesto_poster.jpg"; // Assuming a similar path structure for consistency
+import leader_mug from "../../assets/products/leader_mug.jpg";
+import freedom_flag from "../../assets/products/freedom_flag.jpg";
+import politics_pillow from "../../assets/products/politics_pillow.jpg";
+import stickers_set from "../../assets/products/stickers_set.jpg";
+import whisker_notebook from "../../assets/products/whisker_notebook.jpg";
+import coalition_cap from "../../assets/products/coalition_cap.jpg";
+import party_pennant from "../../assets/products/party_pennant.jpg";
+import caucus_keychain from "../../assets/products/caucus_keychain.jpg";
+import manifesto_poster from "../../assets/products/manifesto_poster.jpg";
 
 const catnadianPartyProducts = [
   {
@@ -20,6 +20,13 @@ const catnadianPartyProducts = [
     material: "100% organic cotton",
     sizes: "S, M, L, XL, XXL",
     colors: ["Party Purple", "Whisker White", "Meow Mint"],
+    reviews: [
+      { rating: 5, comment: "Very comfortable and stylish!" },
+      { rating: 4, comment: "Good quality but a bit pricey." },
+      { rating: 5, comment: "Fits perfectly, and the colors are vibrant." },
+      { rating: 3, comment: "Material is nice but the sizing is a bit off." },
+      { rating: 4, comment: "Great shirt for casual wear." }
+    ],
   },
   {
     id: 2,
@@ -31,6 +38,13 @@ const catnadianPartyProducts = [
     material: "Ceramic",
     capacity: "15 oz",
     features: ["Dishwasher safe", "Microwave safe"],
+    reviews: [
+      { rating: 5, comment: "Perfect for my morning coffee!" },
+      { rating: 4, comment: "Great design, holds heat well." },
+      { rating: 5, comment: "Love the design and the size is just right." },
+      { rating: 3, comment: "Good mug but the handle could be more comfortable." },
+      { rating: 5, comment: "Excellent quality, highly recommend." }
+    ],
   },
   {
     id: 3,
@@ -42,6 +56,13 @@ const catnadianPartyProducts = [
     material: "Polyester",
     dimensions: "3 x 5 ft",
     features: ["Reinforced grommets"],
+    reviews: [
+      { rating: 4, comment: "Looks great in my room!" },
+      { rating: 5, comment: "High quality and vibrant colors." },
+      { rating: 4, comment: "Nice flag but wish it was a bit bigger." },
+      { rating: 5, comment: "Perfect for rallies and events." },
+      { rating: 3, comment: "Good flag but the material feels a bit thin." }
+    ],
   },
   {
     id: 4,
@@ -53,6 +74,13 @@ const catnadianPartyProducts = [
     material: "Polyester (cover), 100% polyester insert",
     dimensions: "18 x 18 inches",
     features: ["Machine-washable cover", "Removable cover"],
+    reviews: [
+      { rating: 5, comment: "Very comfy and easy to clean." },
+      { rating: 4, comment: "Nice design, a bit smaller than expected." },
+      { rating: 5, comment: "Perfect addition to my living room." },
+      { rating: 3, comment: "Good pillow but the cover could be softer." },
+      { rating: 4, comment: "Great pillow for the price." }
+    ],
   },
   {
     id: 5,
@@ -64,6 +92,13 @@ const catnadianPartyProducts = [
     material: "Vinyl",
     quantity: "10 stickers",
     features: ["Water-resistant", "Variety of designs"],
+    reviews: [
+      { rating: 5, comment: "Fun and durable stickers!" },
+      { rating: 4, comment: "Great variety and quality." },
+      { rating: 5, comment: "Perfect for decorating my laptop." },
+      { rating: 3, comment: "Some stickers were smaller than expected." },
+      { rating: 4, comment: "Nice designs, but a bit pricey for stickers." }
+    ],
   },
   {
     id: 6,
@@ -75,6 +110,13 @@ const catnadianPartyProducts = [
     material: "Paper, soft-touch cover",
     pages: "100 lined pages",
     dimensions: "8.5 x 11 inches",
+    reviews: [
+      { rating: 4, comment: "Nice feel and good quality paper." },
+      { rating: 5, comment: "Love the quotes on each page!" },
+      { rating: 5, comment: "Perfect for journaling and note-taking." },
+      { rating: 3, comment: "Good notebook but the cover could be sturdier." },
+      { rating: 4, comment: "Great notebook, very inspiring." }
+    ],
   },
   {
     id: 7,
@@ -86,6 +128,13 @@ const catnadianPartyProducts = [
     material: "100% cotton",
     features: ["Adjustable snapback", "Embroidered logo"],
     colors: ["Coalition Crimson", "Ballot Blue"],
+    reviews: [
+      { rating: 5, comment: "Fits perfectly and looks great!" },
+      { rating: 4, comment: "Good quality, but wish it came in more colors." },
+      { rating: 5, comment: "Excellent cap, very comfortable." },
+      { rating: 3, comment: "Decent cap but the logo could be bigger." },
+      { rating: 4, comment: "Nice cap for daily use." }
+    ],
   },
   {
     id: 8,
@@ -97,6 +146,13 @@ const catnadianPartyProducts = [
     material: "Felt",
     dimensions: "12 x 30 inches",
     colors: ["Victory Violet", "Election Emerald"],
+    reviews: [
+      { rating: 5, comment: "Bright and eye-catching!" },
+      { rating: 4, comment: "Great for parties, wish it was bigger." },
+      { rating: 5, comment: "Perfect for decorating my room." },
+      { rating: 3, comment: "Good pennant but a bit flimsy." },
+      { rating: 4, comment: "Nice addition to my party decor." }
+    ],
   },
   {
     id: 9,
@@ -107,6 +163,13 @@ const catnadianPartyProducts = [
       "Keep your keys organized with this durable metal keychain, adorned with a kitten caucus charm. A compact, yet significant symbol of your political passion.",
     material: "Metal",
     features: ["Durable construction", "Charm included"],
+    reviews: [
+      { rating: 4, comment: "Cute and sturdy keychain." },
+      { rating: 5, comment: "Love the charm, very durable." },
+      { rating: 5, comment: "Perfect for my keys, and very cute." },
+      { rating: 3, comment: "Good keychain but the charm could be bigger." },
+      { rating: 4, comment: "Nice keychain, great quality." }
+    ],
   },
   {
     id: 10,
@@ -118,6 +181,13 @@ const catnadianPartyProducts = [
     material: "Glossy paper",
     dimensions: "24 x 36 inches",
     features: ["High-quality print", "Vibrant colors"],
+    reviews: [
+      { rating: 5, comment: "Looks great on my wall!" },
+      { rating: 4, comment: "Good quality, but a bit expensive." },
+      { rating: 5, comment: "Beautiful poster, very inspiring." },
+      { rating: 3, comment: "Nice poster but the print could be sharper." },
+      { rating: 4, comment: "Great addition to my office." }
+    ],
   },
 ];
 
