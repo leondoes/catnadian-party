@@ -14,6 +14,18 @@ const eventsMock = [
   { id: 10, title: 'Catnadian Litter-ature Club', date: '2024-10-19', description: 'Monthly book club meetings discussing the latest in feline fiction and non-fiction. Share your favorite reads and discover new ones.' },
 ];
 
+const adjustDates = (events) => {
+  const today = new Date();
+  return events.map(event => {
+    const eventDate = new Date(event.date);
+    if (eventDate < today) {
+      const futureDate = new Date(today);
+      futureDate.setMonth(today.getMonth() + 1);
+      return { ...event, date: futureDate.toISOString().split('T')[0] };
+    }
+    return event;
+  });
+};
 
 const CatnadianEventsList = () => {
   const [events, setEvents] = useState([]);
@@ -21,7 +33,7 @@ const CatnadianEventsList = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       setTimeout(() => {
-        setEvents(eventsMock);
+        setEvents(adjustDates(eventsMock));
       }, 1000);
     };
 
