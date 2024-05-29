@@ -27,7 +27,7 @@ export const EventList = styled.ul`
 export const EventItem = styled.li`
   background: white;
   border-radius: 5px;
-  padding: 10px;
+  padding: 20px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   transition: transform 0.3s ease-in-out;
 
@@ -39,9 +39,11 @@ export const EventItem = styled.li`
 
 export const EventTitle = styled.h3`
   color: #007bff;
+  margin-bottom: 10px;
 `;
 
 export const EventDescription = styled.p`
   color: #666;
   line-height: 1.6;
+  margin: 5px 0;
 `;
