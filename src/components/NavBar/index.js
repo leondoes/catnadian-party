@@ -1,16 +1,19 @@
 import React from 'react';
-import {Nav, StyledLink, HomeLogo} from "../NavBar/styled";
+import { Nav, StyledLink, HomeLogo } from "../NavBar/styled";
 import logo from "../../assets/logo.png";
+import CatArmSwipe from "../CatArmSwipe";
 
 const NavBar = () => {
-    return (
-      <Nav>
-        <StyledLink to ="/"><HomeLogo src={logo} alt="home"/></StyledLink>
-        <StyledLink to="/candidates">Candidates</StyledLink>
-        <StyledLink to="/donations">Donations</StyledLink>
-        <StyledLink to="/merchandise">Merchandise</StyledLink>
-      </Nav>
-    );
-  };
-  
-  export default NavBar;
+  return (
+    <Nav>
+      <CatArmSwipe path="/">
+        <HomeLogo src={logo} alt="home" />
+      </CatArmSwipe>
+      <CatArmSwipe path="/candidates">Candidates</CatArmSwipe>
+      <CatArmSwipe path="/donations">Donations</CatArmSwipe>
+      <CatArmSwipe path="/merchandise">Merchandise</CatArmSwipe>
+    </Nav>
+  );
+};
+
+export default NavBar;
