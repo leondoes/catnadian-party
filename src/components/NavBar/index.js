@@ -1,5 +1,5 @@
 import React from 'react';
-import { Nav, StyledLink, HomeLogo } from "../NavBar/styled";
+import { Nav, HomeLogo } from "../NavBar/styled";
 import logo from "../../assets/logo.png";
 import CatArmSwipe from "../CatArmSwipe";
 
