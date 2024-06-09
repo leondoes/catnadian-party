@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { CatArm } from './styled'; // import the styled component
+import { CatArm, CatArmContent } from './styled'; // import styled components
 
-const CatArmSwipe = ({ path }) => {
+const CatArmSwipe = ({ path, children }) => {
   const [active, setActive] = useState(false);
   const navigate = useNavigate();
 
@@ -14,7 +14,11 @@ const CatArmSwipe = ({ path }) => {
     }, 500); // Match this duration with the animation duration
   };
 
-  return <CatArm active={active} onClick={handleClick} />;
+  return (
+    <CatArm $active={active} onClick={handleClick}>
+      <CatArmContent>{children}</CatArmContent>
+    </CatArm>
+  );
 };
 
 export default CatArmSwipe;
