@@ -1,0 +1,22 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="200px"
+  height="200px"
+  viewBox="0 0 200 200">
+  <!-- Scratch Mark -->
+  <path
+    d="M10,30 Q50,10 90,30 T170,50"
+    stroke="black"
+    stroke-width="5"
+    fill="transparent"/>
+  <path
+    d="M20,60 Q60,40 100,60 T180,80"
+    stroke="black"
+    stroke-width="5"
+    fill="transparent"/>
+  <path
+    d="M30,90 Q70,70 110,90 T190,110"
+    stroke="black"
+    stroke-width="5"
+    fill="transparent"/>
+</svg>

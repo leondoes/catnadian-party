@@ -1,8 +1,9 @@
 import styled, { keyframes, css } from 'styled-components';
 import testclaw from '../../assets/testclaw.png'; // Ensure the path is correct
+import scratchmark from '../../assets/scratchmark.png'; // Ensure the path is correct
 
-// Define the swipe animation
-const swipe = keyframes`
+// Define the swipe animations for both directions
+const swipeLeft = keyframes`
   0% {
     transform: translateX(-100%);
   }
@@ -14,19 +15,31 @@ const swipe = keyframes`
   }
 `;
 
+const swipeRight = keyframes`
+  0% {
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+`;
+
 // Styled component for CatArm with conditional animation
 export const CatArm = styled.div`
   position: relative;
   display: inline-block;
   cursor: pointer;
-  
+
   &::after {
     content: '';
     position: absolute;
     top: 50%;
     left: 0;
-    width: 100px; // Adjust based on the size of the testclaw image
-    height: 100px; // Adjust based on the size of the testclaw image
+    width: 200px; // Adjust based on the new size of the testclaw image
+    height: 200px; // Adjust based on the new size of the testclaw image
     background: url(${testclaw}) no-repeat center center;
     background-size: contain;
     transform: translateY(-50%);
@@ -34,9 +47,26 @@ export const CatArm = styled.div`
     transition: opacity 0.2s ease-in-out; // Transition for showing/hiding claws
     ${props => props.$active && css`
       opacity: 1;
-      animation: ${swipe} 0.5s forwards;
+      animation: ${props.$direction === 'left' ? swipeLeft : swipeRight} 0.5s forwards;
     `}
   }
+`;
+
+// Styled component for ScratchMark
+const ScratchMark = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px; // Adjust the size of the scratch mark
+  height: 150px; // Adjust the size of the scratch mark
+  background: url(${scratchmark}) no-repeat center center;
+  background-size: contain;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  ${props => props.$active && css`
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+  `}
 `;
 
 export const CatArmContent = styled.div`
