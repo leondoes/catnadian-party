@@ -1,6 +1,6 @@
 import styled, { keyframes, css } from 'styled-components';
 import testclaw from '../../assets/testclaw.png'; // Ensure the path is correct
-import scratchmark from '../../assets/scratchmark.png'; // Ensure the path is correct
+import scratchmark from '../../assets/scratchmark.svg'; // Ensure the path is correct
 
 // Define the swipe animations for both directions
 const swipeLeft = keyframes`
