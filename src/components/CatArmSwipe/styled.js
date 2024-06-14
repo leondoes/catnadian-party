@@ -53,7 +53,7 @@ export const CatArm = styled.div`
 `;
 
 // Styled component for ScratchMark
-const ScratchMark = styled.div`
+export const ScratchMark = styled.div`
   position: absolute;
   top: 50%;
   left: 50%;
