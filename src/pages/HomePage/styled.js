@@ -34,6 +34,7 @@ const slideInFromBottom = keyframes`
 `;
 
 export const StyledManifesto = styled.div`
+width: 90%;
   opacity: 0; // Start as invisible
   animation: ${slideInFromBottom} 0.5s ease-out forwards;
   &.visible {
