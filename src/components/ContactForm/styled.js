@@ -8,6 +8,7 @@ export const StyledForm = styled.form`
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    background-color: #fff;
 `;
 
 export const StyledLabel = styled.label`
@@ -68,30 +69,54 @@ export const ToggleButton = styled.button`
     transition: background-color 0.2s;
 
     &:hover {
-        background-color: #0056b3; // Darkens the button on hover for a subtle effect
+        background-color: #0056b3;
     }
 `;
 
+export const Overlay = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+`;
+
+export const CloseButton = styled.button`
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+`;
+
 export const ErrorMessage = styled.span`
-    color: #dc3545; // Bootstrap's danger color for errors
+    color: #dc3545;
     font-size: 14px;
-    margin-top: -15px; // Pulls the text closer to the input for clear association
-    margin-bottom: 20px; // Spacing before the next field
-    display: block; // Ensures it doesn't share a line with other elements
+    margin-top: -15px;
+    margin-bottom: 20px;
+    display: block;
 `;
 
 export const SuccessMessage = styled.div`
     padding: 20px;
-    background-color: #28a745; // Bootstrap's success green
+    background-color: #28a745;
     color: white;
     text-align: center;
     border-radius: 8px;
-    margin-top: 20px; // Adds space above the success message
+    margin-top: 20px;
 `;
 
 export const FormTitle = styled.h1`
     font-size: 24px;
     color: #333;
     text-align: center;
-    margin-bottom: 30px; // Adds visual space between the title and the form fields
+    margin-bottom: 30px;
 `;
