@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { EventsContainer, EventsTitle, EventList, EventItem, EventTitle, EventDescription } from './styled';
+import { EventsContainer, EventsTitle, EventList, EventItem, EventTitle, EventDescription, Button, ModalOverlay, ModalContent, CloseButton } from './styled';
 
 const eventsMock = [
   { id: 1, title: 'Purrliament Debate', date: '2024-01-15', description: 'Discussing the most pressing issues in Catnadia!' },
@@ -29,6 +29,7 @@ const adjustDates = (events) => {
 
 const CatnadianEventsList = () => {
   const [events, setEvents] = useState([]);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -40,23 +41,41 @@ const CatnadianEventsList = () => {
     fetchEvents();
   }, []);
 
+  const openModal = () => {
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
   return (
-    <EventsContainer>
-      <EventsTitle>Upcoming Catnadian Events</EventsTitle>
-      {events.length === 0 ? (
-        <EventDescription>Loading events...</EventDescription>
-      ) : (
-        <EventList>
-          {events.map(event => (
-            <EventItem key={event.id}>
-              <EventTitle>{event.title}</EventTitle>
-              <EventDescription>Date: {event.date}</EventDescription>
-              <EventDescription>{event.description}</EventDescription>
-            </EventItem>
-          ))}
-        </EventList>
+    <>
+      <Button onClick={openModal}>View Upcoming Events</Button>
+      {showModal && (
+        <ModalOverlay>
+          <ModalContent>
+            <CloseButton onClick={closeModal}>Close</CloseButton>
+            <EventsContainer>
+              <EventsTitle>Upcoming Catnadian Events</EventsTitle>
+              {events.length === 0 ? (
+                <EventDescription>Loading events...</EventDescription>
+              ) : (
+                <EventList>
+                  {events.map(event => (
+                    <EventItem key={event.id}>
+                      <EventTitle>{event.title}</EventTitle>
+                      <EventDescription>Date: {event.date}</EventDescription>
+                      <EventDescription>{event.description}</EventDescription>
+                    </EventItem>
+                  ))}
+                </EventList>
+              )}
+            </EventsContainer>
+          </ModalContent>
+        </ModalOverlay>
       )}
-    </EventsContainer>
+    </>
   );
 };
 
