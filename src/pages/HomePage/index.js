@@ -6,6 +6,7 @@ import {
   StyledContactForm,
   StyledCatnadianEventsList,
   SplashPicture,
+  Wrapper,
 } from "./styled";
 import ManifestoComponent from "../../components/Manifesto";
 import ContactForm from "../../components/ContactForm";
@@ -46,15 +47,21 @@ const HomePage = () => {
       <SplashPicture>
         <img src={logo} alt="Logo" />
       </SplashPicture>
-      <StyledManifesto ref={refManifesto}>
-        <ManifestoComponent />
-      </StyledManifesto>
-      <StyledContactForm ref={refContactForm}>
-        <ContactForm />
-      </StyledContactForm>
-      <StyledCatnadianEventsList ref={refEventsList}>
-        <CatnadianEventsList />
-      </StyledCatnadianEventsList>
+      <Wrapper>
+        <StyledManifesto ref={refManifesto}>
+          <ManifestoComponent />
+        </StyledManifesto>
+      </Wrapper>
+      <Wrapper>
+        <StyledContactForm ref={refContactForm}>
+          <ContactForm />
+        </StyledContactForm>
+      </Wrapper>
+      <Wrapper>
+        <StyledCatnadianEventsList ref={refEventsList}>
+          <CatnadianEventsList />
+        </StyledCatnadianEventsList>
+      </Wrapper>
     </PageContainer>
   );
 };
