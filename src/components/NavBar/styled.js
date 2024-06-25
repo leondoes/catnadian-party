@@ -14,7 +14,7 @@ const linkFadeIn = keyframes`
 `;
 
 export const Nav = styled.nav`
-  font-family: 'Noto Sans';
+  font-family: 'Noto Sans', sans-serif;
   background-color: #333;
   color: white;
   display: flex;
@@ -39,7 +39,7 @@ export const Nav = styled.nav`
 export const StyledLink = styled(NavLink)`
   color: white;
   text-decoration: none;
-  font-size: 4rem;
+  font-size: 1.25rem; // Adjusted font size for modern readability
   transition: color 0.3s ease, transform 0.2s ease-out;
   animation: ${linkFadeIn} 0.5s ease-out;
 
