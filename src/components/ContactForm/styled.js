@@ -4,41 +4,54 @@ export const StyledForm = styled.form`
     display: flex;
     flex-direction: column;
     max-width: 500px;
+    width: 100%;
     margin: auto;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
     background-color: #fff;
+    position: relative;
+    z-index: 1001;
 `;
 
 export const StyledLabel = styled.label`
-    margin-bottom: 10px;
-    font-size: 16px;
-    color: #333;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #444;
 `;
 
 export const StyledInput = styled.input`
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    &:focus {
+        border-color: #007bff;
+    }
 `;
 
 export const StyledTextArea = styled.textarea`
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    &:focus {
+        border-color: #007bff;
+    }
 `;
 
 export const StyledButton = styled.button`
-    padding: 10px 20px;
+    padding: 12px 25px;
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background-color 0.3s;
 
     &:hover {
         background-color: #0056b3;
@@ -51,26 +64,6 @@ export const StyledCheckboxContainer = styled.div`
 
 export const StyledCheckbox = styled.input`
     margin-right: 10px;
-`;
-
-export const FormContainer = styled.div`
-    transition: all 0.3s ease-in-out;
-`;
-
-export const ToggleButton = styled.button`
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-
-    &:hover {
-        background-color: #0056b3;
-    }
 `;
 
 export const Overlay = styled.div`
@@ -100,8 +93,8 @@ export const CloseButton = styled.button`
 export const ErrorMessage = styled.span`
     color: #dc3545;
     font-size: 14px;
-    margin-top: -15px;
-    margin-bottom: 20px;
+    margin-top: -10px;
+    margin-bottom: 10px;
     display: block;
 `;
 
