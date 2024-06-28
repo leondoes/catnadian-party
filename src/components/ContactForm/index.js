@@ -7,8 +7,6 @@ import {
   StyledButton,
   StyledCheckboxContainer,
   StyledCheckbox,
-  FormContainer,
-  ToggleButton,
   Overlay,
   CloseButton,
   ErrorMessage,
@@ -57,55 +55,60 @@ const ContactForm = () => {
     setFormVisible(!isFormVisible);
   };
 
+  const handleOverlayClick = (e) => {
+    if (e.target === e.currentTarget) {
+      toggleFormVisibility();
+    }
+  };
+
   return (
     <>
       <ToggleButton onClick={toggleFormVisibility}>Contact Us</ToggleButton>
       {isFormVisible && (
-        <Overlay>
+        <Overlay onClick={handleOverlayClick}>
           <CloseButton onClick={toggleFormVisibility}>X</CloseButton>
-          <FormContainer>
-            <StyledForm onSubmit={handleSubmit}>
-              <StyledLabel>
-                Name:
-                <StyledInput
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                />
-                {errors.name && <ErrorMessage>{errors.name}</ErrorMessage>}
-              </StyledLabel>
-              <StyledLabel>
-                Email:
-                <StyledInput
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                />
-                {errors.email && <ErrorMessage>{errors.email}</ErrorMessage>}
-              </StyledLabel>
-              <StyledLabel>
-                Message:
-                <StyledTextArea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                />
-                {errors.message && <ErrorMessage>{errors.message}</ErrorMessage>}
-              </StyledLabel>
-              <StyledCheckboxContainer>
-                <StyledCheckbox
-                  type="checkbox"
-                  name="joinMailingList"
-                  checked={formData.joinMailingList}
-                  onChange={handleChange}
-                />
-                Join Mailing List
-              </StyledCheckboxContainer>
-              <StyledButton type="submit">Send</StyledButton>
-            </StyledForm>
-          </FormContainer>
+          <StyledForm onSubmit={handleSubmit}>
+            <FormTitle>Contact Us</FormTitle>
+            <StyledLabel>
+              Name:
+              <StyledInput
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+              />
+              {errors.name && <ErrorMessage>{errors.name}</ErrorMessage>}
+            </StyledLabel>
+            <StyledLabel>
+              Email:
+              <StyledInput
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+              />
+              {errors.email && <ErrorMessage>{errors.email}</ErrorMessage>}
+            </StyledLabel>
+            <StyledLabel>
+              Message:
+              <StyledTextArea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+              />
+              {errors.message && <ErrorMessage>{errors.message}</ErrorMessage>}
+            </StyledLabel>
+            <StyledCheckboxContainer>
+              <StyledCheckbox
+                type="checkbox"
+                name="joinMailingList"
+                checked={formData.joinMailingList}
+                onChange={handleChange}
+              />
+              Join Mailing List
+            </StyledCheckboxContainer>
+            <StyledButton type="submit">Send</StyledButton>
+          </StyledForm>
         </Overlay>
       )}
     </>
