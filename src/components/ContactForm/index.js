@@ -10,6 +10,9 @@ import {
   Overlay,
   CloseButton,
   ErrorMessage,
+  SuccessMessage,
+  FormTitle,
+  ToggleButton
 } from "./styled";
 
 const ContactForm = () => {
@@ -22,6 +25,7 @@ const ContactForm = () => {
 
   const [errors, setErrors] = useState({});
   const [isFormVisible, setFormVisible] = useState(false);
+  const [isFormSubmitted, setFormSubmitted] = useState(false);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -48,6 +52,7 @@ const ContactForm = () => {
     } else {
       console.log("Form Data:", formData);
       setErrors({});
+      setIsFormSubmitted(true);
     }
   };
 
@@ -108,6 +113,7 @@ const ContactForm = () => {
               Join Mailing List
             </StyledCheckboxContainer>
             <StyledButton type="submit">Send</StyledButton>
+            {isFormSubmitted && <SuccessMessage>Form submitted successfully!</SuccessMessage>}
           </StyledForm>
         </Overlay>
       )}
