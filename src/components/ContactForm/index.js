@@ -52,7 +52,7 @@ const ContactForm = () => {
     } else {
       console.log("Form Data:", formData);
       setErrors({});
-      setIsFormSubmitted(true);
+      setFormSubmitted(true);
     }
   };
 
