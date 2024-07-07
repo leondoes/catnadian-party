@@ -14,14 +14,19 @@ const eventsMock = [
   { id: 10, title: 'Catnadian Litter-ature Club', date: '2024-10-19', description: 'Monthly book club meetings discussing the latest in feline fiction and non-fiction. Share your favorite reads and discover new ones.' },
 ];
 
+const getRandomFutureDate = (today) => {
+  const futureDate = new Date(today);
+  const randomDays = Math.floor(Math.random() * 365); // Random number between 0 and 365
+  futureDate.setDate(today.getDate() + randomDays);
+  return futureDate.toISOString().split('T')[0];
+};
+
 const adjustDates = (events) => {
   const today = new Date();
   return events.map(event => {
     const eventDate = new Date(event.date);
     if (eventDate < today) {
-      const futureDate = new Date(today);
-      futureDate.setMonth(today.getMonth() + 1);
-      return { ...event, date: futureDate.toISOString().split('T')[0] };
+      return { ...event, date: getRandomFutureDate(today) };
     }
     return event;
   });
