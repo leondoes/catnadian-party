@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { forEach, throttle } from 'lodash';
-import { shuffle } from "lodash";
+import { forEach, throttle, shuffle } from 'lodash';
 import {
   ManifestoContainer,
   ManifestoList,
@@ -27,7 +26,6 @@ import felix from "../../assets/candidates/felix.jpg";
 
 const ManifestoComponent = () => {
   const listRef = useRef(null);
-  const containerRef = useRef(null);
 
   const candidatesImages = shuffle([
     chairmanmeow,
@@ -80,49 +78,24 @@ const ManifestoComponent = () => {
     };
   }, [throttledCheckVisibility]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const container = listRef.current;
-      const isBottom = container.scrollHeight - container.scrollTop === container.clientHeight;
-      document.body.style.overflow = isBottom ? "auto" : "hidden";
-    };
-  
-    const container = listRef.current;
-    container.addEventListener('scroll', handleScroll);
-  
-    return () => {
-      container.removeEventListener('scroll', handleScroll);
-      document.body.style.overflow = "auto"; // Reset the overflow when component unmounts
-    };
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener('scroll', throttledCheckVisibility, { passive: true });
-    return () => {
-      window.removeEventListener('scroll', throttledCheckVisibility);
-    };
-  }, [throttledCheckVisibility]);
-
   return (
-    <ManifestoContainer ref={containerRef}>
+    <ManifestoContainer>
       <Title>Catnadian Political Party Manifesto</Title>
       <Paragraph>Welcome to the purr-fect vision of the future! The Catnadian Political Party...</Paragraph>
       <ManifestoList ref={listRef}>
-        {manifestoPoints.map((point, idx) => {
-          return (
-            <ListItem 
-              key={idx} 
-              className="list-item" 
-              style={{ 
-                backgroundImage: `url(${candidatesImages[idx % candidatesImages.length]})`, 
-                backgroundSize: 'cover', 
-                backgroundPosition: 'center' 
-              }}
-            >
-              <StrongText>{point.split(':')[0]}:</StrongText> {point.split(': ')[1]}
-            </ListItem>
-          );
-        })}
+        {manifestoPoints.map((point, idx) => (
+          <ListItem 
+            key={idx} 
+            className="list-item" 
+            style={{ 
+              backgroundImage: `url(${candidatesImages[idx % candidatesImages.length]})`, 
+              backgroundSize: 'cover', 
+              backgroundPosition: 'center' 
+            }}
+          >
+            <StrongText>{point.split(':')[0]}:</StrongText> {point.split(': ')[1]}
+          </ListItem>
+        ))}
       </ManifestoList>
       <Paragraph>Join us in making the Catnadian dream a reality for all felines! ...</Paragraph>
     </ManifestoContainer>

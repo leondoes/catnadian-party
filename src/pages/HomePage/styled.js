@@ -2,14 +2,14 @@ import styled, { keyframes } from "styled-components";
 
 export const SplashPicture = styled.div`
   width: 50vw;
-  margin: 20px auto; // Centers the div horizontally and adds margin
-  display: flex; // Enables flexbox
-  justify-content: center; // Centers content horizontally in the flex container
-  align-items: center; // Centers items vertically in the flex container
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   img {
-    max-width: 100%; // Ensures the image fits within the container
-    height: auto; // Maintains aspect ratio
+    max-width: 100%;
+    height: auto;
   }
 `;
 
@@ -17,20 +17,20 @@ export const PageContainer = styled.div`
   background-color: #e2d8ce;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; // Align items to the top of the container
+  justify-content: flex-start;
   align-items: center;
-  transition: transform 0.5s ease; // Smooth transition for sliding up
-  transform: translateY(0); // Start at current position
-  padding: 20px; // Adds padding around the container
+  transition: transform 0.5s ease;
+  transform: translateY(0);
+  padding: 20px;
 
   &.hidden {
-    transform: translateY(-100vh); // Slide up out of view
+    transform: translateY(-100vh);
   }
 `;
 
 export const Wrapper = styled.div`
   width: 90%;
-  margin-bottom: 20px; // Add margin between components
+  margin-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,7 +39,7 @@ export const Wrapper = styled.div`
 const slideInFromBottom = keyframes`
   from {
     opacity: 0;
-    transform: translateY(100px); // starts the component 100px below its final position
+    transform: translateY(100px);
   }
   to {
     opacity: 1;
@@ -49,28 +49,28 @@ const slideInFromBottom = keyframes`
 
 export const StyledManifesto = styled.div`
   width: 100%;
-  opacity: 0; // Start as invisible
+  opacity: 0;
   animation: ${slideInFromBottom} 0.5s ease-out forwards;
   &.visible {
-    opacity: 1; // Ensure it's visible when the class 'visible' is added
+    opacity: 1;
   }
 `;
 
 export const StyledContactForm = styled.div`
   width: 100%;
-  opacity: 0; // Start as invisible
+  opacity: 0;
   animation: ${slideInFromBottom} 0.5s ease-out forwards;
   &.visible {
-    opacity: 1; // Ensure it's visible when the class 'visible' is added
+    opacity: 1;
   }
 `;
 
 export const StyledCatnadianEventsList = styled.div`
   width: 100%;
-  opacity: 0; // Start as invisible
+  opacity: 0;
   animation: ${slideInFromBottom} 0.5s ease-out forwards;
   &.visible {
-    opacity: 1; // Ensure it's visible when the class 'visible' is added
+    opacity: 1;
   }
 `;
 

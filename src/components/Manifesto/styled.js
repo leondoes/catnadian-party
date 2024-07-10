@@ -12,29 +12,29 @@ const fadeIn = keyframes`
 `;
 
 export const ManifestoContainer = styled.div`
-  position: fixed; // Changed from sticky to fixed
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0; // Ensures the container covers the full viewport
+  bottom: 0;
   animation: ${fadeIn} 1s ease-out;
   padding: 20px;
   background-color: #f0f8ff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow-y: auto; // Enables scrolling for overflow content
+  overflow-y: auto;
 `;
 
 export const Title = styled.h1`
   color: #333366;
   text-align: center;
-  margin-bottom: 20px; // Added margin for spacing
+  margin-bottom: 20px;
 `;
 
 export const Paragraph = styled.p`
   color: #666666;
-  line-height: 1.6; // Slightly increased line height for better readability
-  margin-bottom: 20px; // Added margin for spacing
+  line-height: 1.6;
+  margin-bottom: 20px;
 `;
 
 export const ManifestoList = styled.ul`
@@ -49,7 +49,7 @@ export const ListItem = styled.li`
   margin: 20px 0;
   padding: 20px;
   background-color: #e6e6fa;
-  font-size: 1.25rem; // Adjusted font size for modern readability
+  font-size: 1.25rem;
   color: #333;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
