@@ -24,10 +24,10 @@ const HomePage = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("visible");
-          } // Optionally: else { entry.target.classList.remove('visible'); }
+          }
         });
       },
-      { threshold: 0.1 } // Adjust threshold as needed
+      { threshold: 0.1 }
     );
 
     const refs = [refManifesto, refContactForm, refEventsList];
