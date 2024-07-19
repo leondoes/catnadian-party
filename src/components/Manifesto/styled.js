@@ -12,16 +12,14 @@ const fadeIn = keyframes`
 `;
 
 export const ManifestoContainer = styled.div`
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  animation: ${fadeIn} 1s ease-out;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
   background-color: #f0f8ff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: ${fadeIn} 1s ease-out;
   overflow-y: auto;
 `;
 
