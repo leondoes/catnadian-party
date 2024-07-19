@@ -22,10 +22,6 @@ export const PageContainer = styled.div`
   transition: transform 0.5s ease;
   transform: translateY(0);
   padding: 20px;
-
-  &.hidden {
-    transform: translateY(-100vh);
-  }
 `;
 
 export const Wrapper = styled.div`
