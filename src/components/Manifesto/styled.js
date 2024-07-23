@@ -16,7 +16,7 @@ export const ManifestoContainer = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f0f8ff;
+  background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   animation: ${fadeIn} 1s ease-out;
@@ -30,7 +30,7 @@ export const Title = styled.h1`
 `;
 
 export const Paragraph = styled.p`
-  color: #666666;
+  color: #333333;
   line-height: 1.6;
   margin-bottom: 20px;
 `;
@@ -48,7 +48,7 @@ export const ListItem = styled.li`
   padding: 20px;
   background-color: #e6e6fa;
   font-size: 1.25rem;
-  color: #333;
+  color: #ffffff;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -61,7 +61,7 @@ export const ListItem = styled.li`
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.7); /* Increase opacity for better text visibility */
     z-index: 1;
   }
 
@@ -80,4 +80,14 @@ export const StrongText = styled.strong`
   color: #ff4500;
   font-weight: bold;
   margin-right: 0.5em;
+`;
+
+export const OverlayText = styled.div`
+  position: relative;
+  padding: 20px;
+  color: #ffffff;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  z-index: 2;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 `;

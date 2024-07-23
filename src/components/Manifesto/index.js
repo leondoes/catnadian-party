@@ -7,6 +7,7 @@ import {
   ListItem,
   Title,
   StrongText,
+  OverlayText
 } from "./styled";
 
 import chairmanmeow from "../../assets/candidates/chairmanmeow.jpg";
@@ -93,7 +94,9 @@ const ManifestoComponent = () => {
               backgroundPosition: 'center' 
             }}
           >
-            <StrongText>{point.split(':')[0]}:</StrongText> {point.split(': ')[1]}
+            <OverlayText>
+              <StrongText>{point.split(':')[0]}:</StrongText> {point.split(': ')[1]}
+            </OverlayText>
           </ListItem>
         ))}
       </ManifestoList>
