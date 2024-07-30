@@ -7,6 +7,7 @@ export const Grid = styled.div`
   padding: 20px;
   justify-content: center;
   align-items: stretch;
+  background-color: #f0f0f0; /* Light grey background for contrast */
 `;
 
 export const Product = styled.div`
@@ -14,34 +15,38 @@ export const Product = styled.div`
   flex-direction: column;
   align-items: center;
   border: 1px solid #ddd;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: #f8f8f8;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: #ffffff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 
   &:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
 `;
 
 export const Image = styled.img`
   max-width: 100%;
   height: auto;
-  border-radius: 5px;
+  border-radius: 10px;
   object-fit: cover;
 `;
 
 export const Name = styled.h3`
-  color: #333;
+  color: #222;
   margin: 10px 0;
   text-align: center;
+  font-weight: 600;
+  font-size: 1.2em;
 `;
 
 export const Price = styled.p`
-  color: #666;
+  color: #007bff;
   margin-bottom: 15px;
-  font-size: 18px;
+  font-size: 1.1em;
+  font-weight: bold;
 `;
 
 export const Button = styled.button`
@@ -53,6 +58,7 @@ export const Button = styled.button`
   cursor: pointer;
   transition: background-color 0.2s ease;
   margin-top: 10px;
+  font-size: 1em;
 
   &:hover {
     background-color: #0056b3;
@@ -60,22 +66,22 @@ export const Button = styled.button`
 `;
 
 export const Description = styled.p`
-  color: #555;
-  font-size: 14px;
+  color: #666;
+  font-size: 0.9em;
   text-align: center;
   margin: 10px 0;
 `;
 
 export const FeatureItem = styled.div`
   color: #555;
-  font-size: 14px;
+  font-size: 0.9em;
   text-align: left;
   margin: 5px 0;
 `;
 
 export const FeatureList = styled.div`
   color: #555;
-  font-size: 14px;
+  font-size: 0.9em;
   text-align: left;
   margin: 10px 0;
 `;
@@ -94,4 +100,5 @@ export const Review = styled.div`
 export const Rating = styled.div`
   font-weight: bold;
   margin-bottom: 5px;
+  color: #ff9900;
 `;
